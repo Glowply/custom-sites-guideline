@@ -10,7 +10,7 @@ Websites made for one Glowply client, not templates. Each runs on the client's o
 | [tools/](tools/) | Speed test and the Breakdance ability runner |
 | [clients/](clients/) | One folder per client. Copy `_example/` to start. |
 
-**Local only.** There is no remote and nothing is pushed (rule 1). Client contracts, logins and original photos go in `clients/<slug>/private/`, which is never committed (rule 3).
+**Remote:** github.com/Glowply/custom-sites-guideline (private). Push only when the owner says (rule 1). Client contracts, logins and original photos go in `clients/<slug>/private/`, which is never committed (rule 3).
 
 ## How this differs from a template
 

@@ -2,7 +2,7 @@
 
 Custom websites for single Glowply clients. Before any work, read OWNER-RULES.txt, then PROCESS.md for the stage the client is at.
 
-- Never push; there is no remote (rule 1).
+- Push to origin (github.com/Glowply/custom-sites-guideline) only when the owner says, after checking no `private/` file is in the commits (rule 1).
 - Never commit or read out anything in `clients/*/private/`, and never send client details to an outside service (rule 3).
 - Work happens in `clients/<slug>/`. Check which stage it's at from the files present (PROCESS.md table) and don't skip a gate.
 - Judge with SCORECARD.md. Its weights and the proposed rules (P1–P6) are drafts: follow them, but ask before treating them as agreed.

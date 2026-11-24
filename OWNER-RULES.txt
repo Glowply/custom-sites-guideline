@@ -6,9 +6,12 @@ are not agreed until the owner moves them up into the numbered list.
 ------------------------------------------------------------
 2026-11-24
 ------------------------------------------------------------
-1. NEVER PUSH CUSTOM-SITES TO GITHUB.
-   The repo is local only. Commits are fine, pushes are not, and there is no
-   remote. The owner says if and when that changes.
+1. PUSH ONLY WHEN THE OWNER SAYS.
+   The remote is github.com/Glowply/custom-sites-guideline (private; connected
+   2026-11-24). Commits are fine any time; pushes happen when the owner says,
+   and only what's asked. Before every push, check that nothing from a
+   clients/*/private/ folder is in the commits (rule 3): once pushed, it's on
+   GitHub for everyone with access to the repo.
 
 2. A CUSTOM SITE RUNS ON THE CLIENT'S OWN GLOWPLY STORE.
    Breakdance + WooCommerce + Arabic RTL, the same stack and build flow as the
