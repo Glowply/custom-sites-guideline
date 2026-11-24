@@ -1,0 +1,16 @@
+# Client material that never goes in git (OWNER-RULES rule 3)
+clients/*/private/*
+!clients/*/private/README.md
+
+# Large originals and tool output
+clients/*/photos-original/
+*.psd
+*.ai
+*.zip
+shots/
+node_modules/
+
+# Local editor and Claude settings
+.claude/settings.local.json
+.DS_Store
+Thumbs.db

@@ -1,0 +1,61 @@
+OWNER RULES: standing rules for every custom client site
+Set by the owner. They apply to every session that works in custom-sites or on a
+client's store. Newest first. "Proposed" rules are drafts: follow them, but they
+are not agreed until the owner moves them up into the numbered list.
+
+------------------------------------------------------------
+2026-11-24
+------------------------------------------------------------
+1. NEVER PUSH CUSTOM-SITES TO GITHUB.
+   The repo is local only. Commits are fine, pushes are not, and there is no
+   remote. The owner says if and when that changes.
+
+2. A CUSTOM SITE RUNS ON THE CLIENT'S OWN GLOWPLY STORE.
+   Breakdance + WooCommerce + Arabic RTL, the same stack and build flow as the
+   templates. Anything that would need another platform is a question for the
+   owner before work starts, not a decision a session makes.
+
+3. CLIENT MATERIAL STAYS OUT OF GIT.
+   Contracts, invoices, phone numbers, logins, the client's original photos
+   and anything they sent in confidence go in clients/<slug>/private/, which
+   .gitignore keeps out of commits. Commit the brief, the brand notes, the
+   copy, the mockups and the review log, never the raw material.
+   Never put client details in a request to an outside service (a stock-photo
+   search, an image model, a URL).
+
+4. A CUSTOM SITE CAN BECOME A TEMPLATE, BUT ONLY THROUGH TEMPLATE-GUIDELINE.
+   Optional, and only with the client's OK where the design was made for them.
+   It is rebuilt there under template-guideline's rules (5 palette roles,
+   approved fonts, the theme/demo split, the real-store check, an inactive feed
+   entry, the owner's sign-off), with the client's brand, name and photos
+   taken out. See PROCESS.md, "Promote to a template".
+
+------------------------------------------------------------
+Proposed (2026-11-24, not agreed yet)
+------------------------------------------------------------
+P1. THE CLIENT SIGNS OFF, IN WRITING, BEFORE LAUNCH.
+    Their OK goes in SIGN-OFF.md with the date and what they approved (the
+    page list and the review round). Nothing goes live on their domain before.
+
+P2. TWO REVIEW ROUNDS ARE INCLUDED.
+    Each round is one list of changes from the client, logged in REVIEWS.md.
+    A third round is extra work and is agreed before it starts.
+
+P3. THE CLIENT'S OWN PHOTOS FIRST, THEN STOCK, THEN GENERATED.
+    Their photos first. Stock (Pexels, Pixabay) for the gaps. Generated images
+    (fal.ai, as in template-guideline's PHOTOS.md) only when stock has nothing
+    and the client has agreed to generated images on their site. No paid image
+    generation for mockups.
+
+P4. EVERY CLAIM ON THE SITE IS TRUE FOR THIS CLIENT.
+    Delivery times, returns, cash on delivery, ratings, "handmade", "since
+    2015": each one comes from the brief or the client, not from the design.
+    No fake urgency, no invented counts (base-kit's honesty rules).
+
+P5. NEVER TOUCH A LIVE CLIENT STORE WITHOUT SAYING WHAT WILL CHANGE.
+    Once a store is live, build changes on a copy or a draft page, show the
+    client, then swap. Never delete a client's products, orders, pages or media.
+
+P6. CHECK EVERY PAGE LOGGED OUT AT 1440, 390 AND 320 BEFORE EACH REVIEW ROUND.
+    With the checks in SCORECARD.md, screenshots in the client's mockups/ or
+    review folder.
