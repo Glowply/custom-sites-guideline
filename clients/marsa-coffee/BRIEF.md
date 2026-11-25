@@ -2,7 +2,7 @@
 
 > **Virtual client.** Marsa is made up, to run the custom-site process end to end (2026-11-25). Every fact below is the "client's" answer for this trial; none is about a real business. The owner plays the client at the review stages. For now the site is built on a glowplylibrary.com subsite instead of a client store.
 
-**Status:** direction
+**Status:** direction (three mockups shown 2026-11-25; waiting for the client's pick)
 **Store:** for the trial, a glowplylibrary.com subsite (no feed entry: this is not a template)
 **Deadline:** none (trial)
 
@@ -60,6 +60,7 @@
 | Unopened bags returnable within 7 days; ground coffee only if we ground it wrong | The client, intake |
 | Cash on delivery and card | The client, intake |
 | A family roaster in Alexandria, online for two years | The client, intake |
+| Cafés and offices buy by the kilo; the blend can be roasted to the café's taste | The client, intake (added 2026-11-25: it was in HOME.md's copy but missing here) |
 
 **Not to claim:** awards, "the best in Egypt", ratings or reviews (none collected yet), how many customers, organic or fair trade (no certificates), the founding year.
 

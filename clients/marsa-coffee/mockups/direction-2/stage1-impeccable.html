@@ -1,0 +1,1198 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مرسى، محمصة بن في إسكندرية</title>
+<meta name="description" content="بن طازة من محمصة صغيرة في إسكندرية. بنحمّص الأحد والأربع، وبنطحن على طلبك، وكل كيس عليه تاريخ تحميصه.">
+<meta name="theme-color" content="#1F2A44">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400..900&family=Noto+Naskh+Arabic:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1F2A44;
+  --navy-2:#26324F;      /* printed box tint on the backboard */
+  --kraft:#C9A77C;
+  --kraft-deep:#A88658;
+  --kraft-hover:#D6B88F;
+  --paper:#F4EFE6;
+  --paper-back:#E8E0D1;  /* the back of a sheet */
+  --red:#B5452F;         /* roast dates only */
+  --grey:#8C8A85;        /* newsprint grey: rules, perforations */
+  --ink-past:#6B6964;    /* past days on a sheet */
+  --on-navy:#F4EFE6;
+  --on-navy-soft:#CBD3E8;
+  --display:"Alexandria", "Noto Naskh Arabic", sans-serif;
+  --naskh:"Noto Naskh Arabic", "Alexandria", serif;
+  --gutter:16px;
+  --wrap:1280px;
+  --tear:400ms;
+}
+@media (min-width:768px){ :root{ --gutter:40px; } }
+@media (min-width:1200px){ :root{ --gutter:80px; } }
+
+*{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; overflow-x:clip; scrollbar-color:var(--kraft) var(--navy); }
+body{
+  margin:0; overflow-x:clip;
+  background:var(--navy); color:var(--on-navy);
+  font-family:var(--display); font-weight:400; font-size:17px; line-height:1.7;
+  caret-color:var(--kraft);
+}
+::selection{ background:var(--kraft); color:var(--navy); }
+img{ display:block; max-width:100%; height:auto; }
+a{ color:inherit; text-underline-offset:.3em; text-decoration-thickness:1px; }
+button,select,input{ font:inherit; color:inherit; }
+:focus-visible{ outline:2px solid var(--kraft); outline-offset:3px; border-radius:2px; }
+.paper :focus-visible, .on-paper:focus-visible{ outline-color:var(--navy); }
+h1,h2,h3{ margin:0; font-weight:800; line-height:1.25; text-wrap:balance; }
+p{ margin:0; }
+.wrap{ width:100%; max-width:calc(var(--wrap) + 2*var(--gutter)); margin-inline:auto; padding-inline:var(--gutter); }
+.sr{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+.num{ font-variant-numeric:tabular-nums; }
+
+/* print grain on the backboard and on the sheets */
+.grain{ position:relative; isolation:isolate; }
+.grain::after{
+  content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity:.09; mix-blend-mode:multiply;
+}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  min-height:48px; padding:10px 22px; border-radius:3px;
+  background:var(--kraft); color:var(--navy); border:1.5px solid var(--kraft-deep);
+  font-family:var(--display); font-weight:700; font-size:17px; line-height:1.2;
+  text-decoration:none; cursor:pointer;
+  box-shadow:0 2px 6px -2px rgba(10,14,26,.45);
+  transition:background-color 160ms ease-out, transform 160ms ease-out;
+}
+.btn:hover{ background:var(--kraft-hover); }
+.btn:active{ transform:translateY(1px); }
+.btn svg{ width:20px; height:20px; flex:none; }
+.btn[data-added]{ background:var(--paper); border-color:var(--navy); }
+.link{ color:var(--on-navy); font-weight:500; text-decoration:underline; text-underline-offset:.35em; }
+.link:hover{ color:var(--kraft); }
+
+/* ---------- strip ---------- */
+.strip{ background:var(--paper); color:var(--navy); font-size:16px; line-height:1.5; padding:10px 4px; }
+.strip .wrap{ text-align:center; }
+.strip b{ color:var(--red); font-weight:800; }
+.strip .tail{ white-space:nowrap; }
+
+/* ---------- header ---------- */
+.site-head{ position:relative; z-index:5; }
+.site-head .wrap{ display:flex; align-items:center; gap:16px; min-height:68px; }
+.brand{ display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--on-navy); margin-inline-end:auto; }
+.brand svg{ width:44px; height:44px; color:var(--kraft); }
+.brand span{ font-weight:900; font-size:26px; letter-spacing:0; }
+.nav{ display:none; }
+.nav ul{ list-style:none; margin:0; padding:0; display:flex; gap:28px; }
+.nav a{ text-decoration:none; font-weight:500; font-size:16px; color:var(--on-navy-soft); }
+.nav a:hover{ color:var(--on-navy); text-decoration:underline; }
+.search{ display:none; position:relative; }
+.search input{
+  width:220px; min-height:42px; padding:8px 40px 8px 14px; border-radius:3px;
+  background:var(--navy-2); border:1px solid rgba(244,239,230,.28); color:var(--on-navy); font-size:15px;
+}
+.search input::placeholder{ color:var(--on-navy-soft); opacity:1; }
+.search svg{ position:absolute; inset-inline-start:12px; top:50%; translate:0 -50%; width:18px; height:18px; color:var(--on-navy-soft); pointer-events:none; }
+.icon-btn{
+  display:inline-flex; align-items:center; gap:8px; min-height:44px; min-width:44px; padding:0 10px;
+  background:none; border:1px solid rgba(244,239,230,.28); border-radius:3px; cursor:pointer; color:var(--on-navy);
+  text-decoration:none; font-size:15px; font-weight:500;
+}
+.icon-btn:hover{ border-color:var(--kraft); }
+.icon-btn svg{ width:22px; height:22px; }
+.cart-count{
+  min-width:24px; height:24px; padding:0 6px; border-radius:12px; display:inline-grid; place-items:center;
+  background:var(--kraft); color:var(--navy); font-weight:800; font-size:14px; line-height:1;
+}
+.cart-count.bump{ animation:bump 240ms ease-out; }
+@keyframes bump{ 40%{ transform:translateY(-3px); } }
+.menu-panel{ border-top:1px solid rgba(244,239,230,.16); padding-top:12px; }
+.menu-panel[hidden]{ display:none; }
+.menu-panel .wrap{ padding-block:0 20px; display:grid; gap:4px; }
+.menu-panel a{ display:block; padding:10px 0; text-decoration:none; font-weight:500; font-size:18px; border-bottom:1px solid rgba(244,239,230,.1); }
+.menu-panel .search{ display:block; margin-top:12px; }
+.menu-panel .search input{ width:100%; font-size:16px; }
+@media (min-width:1024px){
+  .nav,.search{ display:block; }
+  .menu-btn{ display:none; }
+}
+
+/* ---------- hero: the backboard ---------- */
+.hero{ padding-block:8px 56px; }
+.hero .wrap{
+  display:grid; gap:16px;
+  grid-template-columns:minmax(0,1fr);
+  grid-template-areas:"pad" "head" "panel" "more";
+}
+.hero h1{ grid-area:head; font-size:clamp(28px, 7.6vw, 64px); font-weight:800; line-height:1.3; }
+.hero-more{ grid-area:more; display:grid; gap:20px; justify-items:start; }
+.hero-more p{ font-size:18px; max-width:34em; color:var(--on-navy-soft); }
+.hero-more .actions{ display:flex; flex-wrap:wrap; align-items:center; gap:14px 24px; }
+.hero-mini{ display:none; }
+@media (min-width:1024px){
+  .hero{ padding-block:24px 72px; }
+  .hero .wrap{
+    grid-template-columns:minmax(0,1fr) 520px;
+    grid-template-rows:auto auto 1fr;
+    grid-template-areas:"head pad" "more pad" "mini panel";
+    column-gap:clamp(48px, 6vw, 96px); row-gap:24px;
+  }
+  .hero h1{ align-self:end; padding-top:56px; }
+  .hero-mini{ display:block; grid-area:mini; align-self:end; }
+}
+
+.sep{ display:inline-block; width:1.5px; height:.85em; background:currentColor; opacity:.45; margin-inline:.55em; vertical-align:-.08em; }
+.hero-more{ align-content:start; }
+.panel-top{ padding-inline-end:0; }
+@media (min-width:1024px){ .panel-top{ grid-template-columns:96px minmax(0,1fr) !important; } .panel-top img{ width:96px !important; height:96px !important; } }
+.toast:not(.show){ visibility:hidden; transition:transform 240ms cubic-bezier(.2,.8,.2,1), visibility 0s linear 240ms; }
+.week .wd .s{ display:none; }
+@media (max-width:640px){ .week .wd .l{ display:none; } .week .wd .s{ display:inline; } }
+@media (min-width:1180px){
+  .catalog{ display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:16px; align-items:start; }
+  .catalog .sheets{ display:contents; }
+  .catalog .tools{ margin-top:14px; }
+  .catalog .tools-grid{ grid-template-columns:1fr; }
+  .catalog .tool{ grid-template-columns:72px minmax(0,1fr); padding:16px; }
+  .catalog .tool img{ width:72px; height:72px; }
+}
+
+/* the pad: kraft mount, hang hole, staples, stacked sheets */
+.pad{
+  grid-area:pad; position:relative;
+  background:var(--kraft); border-radius:4px;
+  padding:30px 10px 14px;
+  box-shadow:0 18px 30px -18px rgba(5,8,18,.75);
+}
+.pad::before{ /* hang hole punched through the cardboard */ z-index:3;
+  content:""; position:absolute; top:9px; left:50%; translate:-50% 0;
+  width:14px; height:14px; border-radius:50%;
+  background:var(--navy); box-shadow:inset 0 2px 3px rgba(0,0,0,.45);
+}
+.stack{ position:relative; }
+.stack::before,.stack::after{ /* sheets underneath, seen at the bottom edge */
+  content:""; position:absolute; inset-inline:3px; bottom:-4px; height:12px;
+  background:#E7E0D2; border-radius:0 0 2px 2px; z-index:0;
+}
+.stack::after{ inset-inline:6px; bottom:-8px; background:#D9D1C1; z-index:-1; }
+.sheet{
+  position:relative; z-index:1;
+  background:var(--paper); color:var(--navy);
+  border-radius:1px 1px 2px 2px;
+  text-align:center;
+  padding:26px 14px 16px;
+}
+.sheet .perf{ /* perforation row under the staples */
+  position:absolute; top:16px; inset-inline:10px; height:4px;
+  background-image:radial-gradient(circle, var(--grey) 1.1px, transparent 1.6px);
+  background-size:9px 4px; background-repeat:repeat-x; opacity:.75;
+}
+.staple{
+  position:absolute; top:5px; width:26px; height:5px; border-radius:2px; z-index:3;
+  background:linear-gradient(#cfd3d9,#8f959e); box-shadow:0 1px 1px rgba(0,0,0,.35);
+}
+.staple.s1{ right:22%; } .staple.s2{ left:22%; }
+.sheet .day{ display:block; font-weight:700; font-size:clamp(24px, 7vw, 40px); line-height:1.2; margin-top:6px; }
+.sheet .big{
+  display:block; font-weight:900; line-height:.92;
+  font-size:clamp(116px, 38vw, 170px);
+  letter-spacing:-.02em;
+  /* offset misregistration: a thin ghost of the second ink pass */
+  text-shadow:-2px 1px 0 rgba(31,42,68,.13);
+}
+.sheet .big.red{ color:var(--red); }
+.sheet .mon{ display:block; font-weight:700; font-size:clamp(21px, 5.6vw, 30px); line-height:1.3; }
+.sheet .rule{ height:0; border-top:2px dotted var(--grey); margin:10px 8px 8px; opacity:.8; }
+.sheet .label{ display:block; font-weight:500; font-size:18px; }
+.sheet .fine{ display:block; font-family:var(--naskh); font-size:17px; line-height:1.75; margin-top:4px; }
+@media (min-width:1024px){
+  .pad{ padding:36px 14px 18px; }
+  .sheet{ padding:34px 28px 26px; }
+  .sheet .big{ font-size:218px; }
+  .sheet .day{ font-size:40px; }
+  .sheet .mon{ font-size:32px; }
+  .sheet .label{ font-size:22px; }
+  .sheet .fine{ font-size:18px; }
+}
+
+/* today's sheet: torn away on load (paper physics: curl, tear, drop) */
+.sheet.today{ position:absolute; inset:0; z-index:4; }
+.sheet.today::after{ /* the curling corner catches light */
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(225deg, transparent 55%, rgba(255,255,255,0) 55%);
+}
+.sheet.today.tearing{
+  transform-origin:100% 0;
+  animation:tear var(--tear) cubic-bezier(.55,0,.85,.4) forwards;
+}
+.sheet.today.tearing::after{ animation:curl var(--tear) linear forwards; }
+@keyframes tear{
+  0%{ transform:none; }
+  30%{ transform:rotate(5deg) skewY(-2deg); }
+  100%{ transform:translate(-14%, 125%) rotate(26deg); }
+}
+@keyframes curl{
+  0%{ background:linear-gradient(225deg, transparent 100%, rgba(0,0,0,0) 100%); }
+  30%{ background:linear-gradient(225deg, transparent 62%, rgba(31,42,68,.16) 63%, rgba(255,255,255,.6) 70%, transparent 82%); }
+  100%{ background:linear-gradient(225deg, transparent 40%, rgba(31,42,68,.2) 41%, rgba(255,255,255,.55) 52%, transparent 70%); }
+}
+.sheet.today.gone{ visibility:hidden; }
+.stub{ /* paper left under the staples after the tear */
+  position:absolute; top:0; inset-inline:10px; height:26px; z-index:2; display:none;
+}
+.stub svg{ width:100%; height:100%; display:block; }
+.pad.torn .stub{ display:block; }
+@media (prefers-reduced-motion:reduce){
+  .sheet.today{ display:none; }
+  .pad .stub{ display:block; }
+}
+
+/* ---------- printed ad boxes on the backboard ---------- */
+.ad{
+  position:relative;
+  border:1.5px solid rgba(244,239,230,.55);
+  outline:1px solid rgba(244,239,230,.25); outline-offset:-6px;
+  border-radius:2px; padding:18px;
+  background:var(--navy-2);
+}
+.ad .stamp-mark{ position:absolute; top:12px; inset-inline-end:12px; width:46px; height:46px; color:var(--kraft); opacity:.9; transform:rotate(-8deg); }
+
+/* best-seller panel */
+.panel{ grid-area:panel; }
+.panel-top{ display:grid; grid-template-columns:72px minmax(0,1fr); gap:14px; align-items:center; }
+.panel-top img{ width:72px; height:72px; object-fit:cover; border-radius:2px; border:3px solid var(--paper); }
+.panel h2{ font-size:24px; }
+.panel .meta{ color:var(--on-navy-soft); font-size:16px; line-height:1.5; }
+.price{ font-weight:900; font-size:26px; line-height:1; white-space:nowrap; }
+.price small{ font-size:.62em; font-weight:700; margin-inline-start:3px; }
+.buy{ display:flex; gap:10px; align-items:stretch; margin-top:14px; flex-wrap:wrap; }
+.buy .grind{ flex:1 1 120px; min-width:0; }
+.buy .btn{ flex:1 1 120px; white-space:nowrap; padding-inline:12px; gap:8px; }
+.grind{ position:relative; background:var(--paper); border-radius:3px; }
+.grind label{ position:absolute; top:5px; inset-inline-start:12px; font-size:12px; line-height:1; font-weight:500; color:#4A5470; pointer-events:none; }
+.grind select{
+  appearance:none; width:100%; min-height:48px; padding:17px 12px 4px 34px; border-radius:3px;
+  background:var(--paper); color:var(--navy); border:1.5px solid var(--paper); font-size:16px; font-weight:500; cursor:pointer;
+}
+.grind svg{ position:absolute; inset-inline-end:10px; top:50%; translate:0 -50%; width:16px; height:16px; color:var(--navy); pointer-events:none; }
+.panel .say{ margin-top:14px; font-size:16px; color:var(--on-navy-soft); }
+.sticker{
+  display:inline-grid; place-items:center; text-align:center;
+  width:74px; height:74px; border-radius:50%;
+  background:var(--red); color:var(--paper);
+  font-weight:800; font-size:13px; line-height:1.25;
+  transform:rotate(-7deg);
+  box-shadow:0 2px 4px -1px rgba(0,0,0,.3);
+}
+.sticker b{ display:block; font-size:22px; font-weight:900; line-height:1; }
+.panel .sticker{ position:absolute; top:-16px; inset-inline-start:4px; z-index:2; width:60px; height:60px; font-size:11px; }
+.panel .sticker b{ font-size:19px; }
+@media (min-width:1024px){ .panel .sticker{ width:70px; height:70px; font-size:12px; top:-20px; } .panel .sticker b{ font-size:22px; } }
+.panel .stamp-mark{ top:-16px; inset-inline-end:10px; width:52px; height:52px; z-index:2; }
+.tool{ position:relative; }
+.tool .stamp-mark{ top:-14px; inset-inline-end:10px; width:46px; height:46px; }
+.price-row{ display:flex; align-items:baseline; gap:12px; margin-top:4px; flex-wrap:wrap; }
+
+/* mini month (desktop hero) */
+.hero-mini h2{ font-size:18px; font-weight:500; color:var(--on-navy-soft); margin-bottom:10px; }
+
+/* ---------- section heads ---------- */
+.sec{ padding-block:clamp(64px, 9vw, 120px); }
+.sec-head{ display:flex; align-items:end; justify-content:space-between; gap:12px 32px; flex-wrap:wrap; margin-bottom:clamp(24px, 4vw, 40px); }
+.sec-head h2{ font-size:clamp(28px, 5vw, 48px); }
+.sec-head p{ color:var(--on-navy-soft); max-width:36em; }
+
+/* ---------- methods ---------- */
+.methods-grid{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px; }
+@media (max-width:359px){ .methods-grid{ grid-template-columns:1fr; } }
+@media (min-width:1024px){ .methods-grid{ grid-template-columns:repeat(4, minmax(0,1fr)); gap:20px; } }
+.method{
+  display:flex; flex-direction:column; align-items:stretch; text-align:start; gap:10px;
+  width:100%; color:var(--on-navy); cursor:pointer; font:inherit;
+  padding:18px 16px 16px;
+  transition:background-color 160ms ease-out, border-color 160ms ease-out;
+}
+.method:hover{ background:#2C3959; border-color:var(--kraft); }
+.method .m-name{ font-weight:800; font-size:clamp(22px, 2.4vw, 30px); line-height:1.2; }
+.method .m-grind{ font-weight:500; font-size:16px; color:var(--kraft); }
+.method .grains{ width:100%; height:44px; color:var(--paper); }
+.method .m-for{ font-size:16px; line-height:1.6; color:var(--on-navy-soft); }
+.method .m-go{ margin-top:auto; padding-top:8px; font-weight:700; font-size:16px; display:flex; align-items:center; gap:6px; }
+.method .m-go svg{ width:18px; height:18px; }
+
+/* ---------- coffees: a pad of sheets ---------- */
+.filters{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:24px; }
+.chip{
+  min-height:44px; padding:8px 16px; border-radius:22px; cursor:pointer;
+  background:none; border:1.5px solid rgba(244,239,230,.4); color:var(--on-navy); font-weight:500; font-size:16px;
+}
+.chip:hover{ border-color:var(--kraft); }
+.chip[aria-pressed="true"]{ background:var(--paper); color:var(--navy); border-color:var(--paper); }
+.sheets{
+  display:grid; gap:16px;
+  grid-auto-flow:column; grid-auto-columns:min(82%, 330px);
+  overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x mandatory;
+  padding:14px 2px 22px; margin-inline:calc(-1 * var(--gutter)); padding-inline:var(--gutter);
+  scroll-padding-inline:var(--gutter);
+}
+@media (min-width:860px){
+  .sheets{ grid-auto-flow:row; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); overflow:visible; margin-inline:0; padding-inline:0; }
+}
+.csheet{
+  scroll-snap-align:start; position:relative;
+  background:var(--paper); color:var(--navy);
+  padding:28px 16px 18px; display:flex; flex-direction:column; gap:10px;
+  border-radius:1px 1px 2px 2px;
+  box-shadow:0 3px 0 -1px #E2DACB, 0 6px 0 -2px #D3CABA, 0 16px 24px -16px rgba(5,8,18,.7);
+}
+.csheet[hidden]{ display:none; }
+.csheet .perf{ position:absolute; top:12px; inset-inline:10px; height:4px; background-image:radial-gradient(circle, var(--grey) 1.1px, transparent 1.6px); background-size:9px 4px; background-repeat:repeat-x; opacity:.75; }
+.csheet .roast-on{ font-weight:700; font-size:15px; color:var(--red); display:flex; gap:8px; border-bottom:1px solid rgba(140,138,133,.5); padding-bottom:8px; }
+
+.csheet img{ width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:1px; background:#DDD5C6; }
+.csheet h3{ font-size:23px; font-weight:800; }
+.csheet .origin{ font-size:16px; color:#3E4864; line-height:1.5; }
+.roast-scale{ display:flex; align-items:center; gap:10px; font-size:15px; color:#3E4864; }
+.roast-scale i{ display:flex; gap:3px; }
+.roast-scale i b{ width:14px; height:8px; border:1.5px solid var(--navy); border-radius:1px; }
+.roast-scale i b.on{ background:var(--navy); }
+.notes{ font-family:var(--naskh); font-size:17px; line-height:1.6; }
+.csheet .foot{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; margin-top:auto; padding-top:8px; border-top:2px dotted rgba(140,138,133,.8); }
+.csheet .weight{ font-size:16px; color:#3E4864; }
+.csheet .buy{ margin-top:4px; }
+.csheet .grind{ background:#FFF8EE; } .csheet .grind select{ background:#FFF8EE; border-color:#B9B2A4; }
+.csheet .btn{ border-color:var(--kraft-deep); }
+
+.tools{ margin-top:clamp(40px, 6vw, 64px); }
+.tools h3{ font-size:24px; margin-bottom:16px; }
+.tools-grid{ display:grid; gap:16px; }
+@media (min-width:860px){ .tools-grid{ grid-template-columns:1fr 1fr; } }
+.tool{ display:grid; grid-template-columns:96px minmax(0,1fr); gap:16px; align-items:start; }
+.tool img{ width:96px; height:96px; object-fit:cover; border-radius:2px; border:3px solid var(--paper); }
+.tool h4{ margin:0; font-size:22px; font-weight:800; line-height:1.3; }
+.tool p{ font-size:16px; color:var(--on-navy-soft); }
+.tool .row{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:10px; flex-wrap:wrap; }
+
+/* ---------- order: the month grid and the flip pad ---------- */
+.order-grid{ display:grid; gap:32px; }
+@media (min-width:1024px){ .order-grid{ grid-template-columns:400px minmax(0,1fr); gap:clamp(40px, 6vw, 96px); align-items:start; } }
+.flip-pad{ position:relative; background:var(--kraft); border-radius:4px; padding:26px 10px 12px; max-width:400px; width:100%; box-shadow:0 18px 30px -18px rgba(5,8,18,.75); }
+.flip-pad::before{ content:""; position:absolute; top:7px; left:50%; translate:-50% 0; width:12px; height:12px; border-radius:50%; background:var(--navy); box-shadow:inset 0 2px 3px rgba(0,0,0,.45); }
+.flip-stage{ position:relative; perspective:900px; height:260px; }
+.fsheet{
+  position:absolute; inset:0; background:var(--paper); color:var(--navy); text-align:center;
+  padding:22px 12px 14px; transform-origin:50% 0; backface-visibility:hidden;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+}
+.fsheet .perf{ position:absolute; top:10px; inset-inline:10px; height:4px; background-image:radial-gradient(circle, var(--grey) 1.1px, transparent 1.6px); background-size:9px 4px; background-repeat:repeat-x; opacity:.75; }
+.fsheet .step{ font-weight:800; font-size:22px; }
+.fsheet .fbig{ font-weight:900; font-size:120px; line-height:.95; text-shadow:-2px 1px 0 rgba(31,42,68,.13); }
+.fsheet .fbig.red{ color:var(--red); }
+.fsheet .fday{ font-weight:700; font-size:20px; }
+.fsheet .fsub{ font-family:var(--naskh); font-size:16px; color:#3E4864; }
+.fsheet.flipped{ transform:rotateX(-178deg) translateY(-2px); visibility:hidden; transition:transform var(--tear) cubic-bezier(.45,0,.2,1), visibility 0s linear var(--tear); }
+.fsheet.down{ transition:transform var(--tear) cubic-bezier(.45,0,.2,1); }
+@media (prefers-reduced-motion:reduce){ .fsheet.flipped,.fsheet.down{ transition:none; } }
+.steps{ list-style:none; margin:20px 0 0; padding:0; display:grid; gap:10px; max-width:400px; }
+.steps button{
+  width:100%; text-align:start; display:grid; grid-template-columns:auto minmax(0,1fr); gap:4px 12px; align-items:baseline;
+  padding:14px 14px; background:none; border:1.5px solid rgba(244,239,230,.3); border-radius:3px; cursor:pointer; color:var(--on-navy);
+}
+.steps button:hover{ border-color:var(--kraft); }
+.steps button[aria-pressed="true"]{ background:var(--navy-2); border-color:var(--paper); }
+.steps .s-name{ font-weight:800; font-size:20px; }
+.steps .s-when{ font-weight:500; font-size:15px; color:var(--kraft); }
+.steps .s-text{ grid-column:1 / -1; font-size:16px; color:var(--on-navy-soft); line-height:1.65; }
+
+.month{ background:var(--paper); color:var(--navy); padding:22px 14px 18px; border-radius:2px; position:relative; }
+.month-title{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:12px; padding-inline:4px; }
+.month-title h3{ font-size:24px; font-weight:800; }
+.month-title span{ font-size:15px; color:var(--ink-past); }
+.cal{ width:100%; border-collapse:collapse; table-layout:fixed; }
+.cal th{ font-weight:700; font-size:13px; padding:6px 0; color:#3E4864; border-bottom:1.5px solid var(--navy); }
+.cal th.r{ color:var(--red); }
+.cal td{ text-align:center; vertical-align:top; padding:4px 1px; height:clamp(48px, 9vw, 72px); border-bottom:1px solid rgba(140,138,133,.4); }
+.cal .d{ display:inline-grid; place-items:center; width:clamp(32px, 7vw, 44px); height:clamp(32px, 7vw, 44px); border-radius:50%; font-weight:800; font-size:clamp(16px, 2.6vw, 20px); line-height:1; }
+.cal .past .d{ color:var(--ink-past); font-weight:500; }
+.cal .roastday .d{ color:var(--red); }
+.cal .past.roastday .d{ color:#A0664F; }
+.cal .today .d{ box-shadow:inset 0 0 0 2px var(--navy); }
+.cal .cutoff .d{ box-shadow:inset 0 0 0 2px var(--navy); border-radius:4px; }
+.cal .next .d{ background:var(--red); color:var(--paper); }
+.cal .out .d{ background:var(--kraft); color:var(--navy); }
+.cal .tag{ display:block; font-size:11px; font-weight:700; line-height:1.2; margin-top:3px; color:var(--navy); }
+.cal .next .tag{ color:var(--red); }
+.legend{ display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:14px; font-size:15px; color:#3E4864; padding-inline:4px; }
+.legend i{ display:inline-block; width:14px; height:14px; border-radius:50%; vertical-align:-2px; margin-inline-end:6px; }
+.legend .l-r{ background:var(--red); } .legend .l-o{ background:var(--kraft); } .legend .l-t{ box-shadow:inset 0 0 0 2px var(--navy); }
+.legend .l-c{ box-shadow:inset 0 0 0 2px var(--navy); border-radius:3px; }
+.ship-note{ margin-top:16px; font-size:16px; color:var(--on-navy-soft); }
+
+/* mini month in hero uses the same table, compact */
+.hero-mini .month{ padding:14px 10px 10px; }
+.hero-mini .cal td{ height:52px; }
+
+/* ---------- brew: the back of a sheet ---------- */
+.back{
+  position:relative; overflow:hidden; background:var(--paper-back); color:var(--navy);
+  border-radius:2px; padding:clamp(28px, 5vw, 56px) clamp(18px, 4vw, 56px);
+  display:grid; gap:28px;
+}
+.back .ghost{ /* the front's numeral showing through the newsprint */
+  position:absolute; z-index:0; top:-.08em; inset-inline-start:-.04em;
+  font-weight:900; font-size:clamp(220px, 46vw, 520px); line-height:1; color:var(--red); opacity:.05;
+  transform:scaleX(-1); pointer-events:none; user-select:none;
+}
+.back > *:not(.ghost){ position:relative; z-index:1; }
+@media (min-width:1024px){ .back{ grid-template-columns:minmax(0,1fr) 420px; align-items:center; } }
+.back h2{ font-size:clamp(26px, 4.4vw, 44px); max-width:16em; }
+.back ol{ list-style:none; margin:24px 0 0; padding:0; display:grid; gap:16px; counter-reset:b; max-width:34em; }
+.back li{ counter-increment:b; display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:baseline; font-family:var(--naskh); font-size:19px; line-height:1.7; }
+.back li::before{ content:counter(b, arabic-indic); font-family:var(--display); font-weight:900; font-size:34px; line-height:1; color:var(--navy); }
+.back .more{ margin-top:24px; display:inline-block; font-weight:700; color:var(--navy); }
+.back figure{ margin:0; position:relative; isolation:isolate; border:1.5px solid var(--navy); }
+.back figure::before,.back figure::after{ content:""; position:absolute; inset:0; pointer-events:none; }
+/* printed in one ink, like the back of a calendar sheet: darks go navy, lights go paper */
+.back figure::before{ background:var(--navy); mix-blend-mode:lighten; }
+.back figure::after{ background:var(--paper-back); mix-blend-mode:multiply; }
+.back figure img{ width:100%; aspect-ratio:4/3; object-fit:cover; filter:grayscale(1) contrast(1.15) brightness(1.08); }
+
+/* ---------- cafés: a weekly order sheet ---------- */
+.weekly{ background:var(--paper); color:var(--navy); border-radius:2px; padding:clamp(24px, 4vw, 48px); display:grid; gap:28px; position:relative; }
+@media (min-width:1024px){ .weekly{ grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); align-items:center; } }
+.weekly h2{ font-size:clamp(28px, 4.6vw, 44px); }
+.weekly p{ margin-top:12px; font-size:18px; max-width:30em; }
+.weekly .btn{ margin-top:22px; }
+
+.week{ display:grid; grid-template-columns:repeat(7, minmax(0,1fr)); border:1.5px solid var(--navy); border-radius:2px; }
+.week div{ border-inline-start:1px solid rgba(31,42,68,.3); padding:10px 2px 12px; text-align:center; min-height:112px; display:flex; flex-direction:column; align-items:center; gap:8px; }
+.week div:first-child{ border-inline-start:0; }
+.week .wd{ font-weight:600; font-size:clamp(11.5px, 1.6vw, 16px); line-height:1.3; }
+@media (max-width:480px){ .weekly{ padding:24px 14px; } .week div{ padding-inline:0; } }
+.week .r .wd{ color:var(--red); }
+.week .dot{ width:clamp(26px, 4vw, 40px); height:clamp(26px, 4vw, 40px); border-radius:50%; background:var(--red); }
+.week .wl{ font-size:clamp(11px, 1.3vw, 14px); color:var(--red); font-weight:700; line-height:1.2; }
+.week-cap{ margin-top:10px; font-size:15px; color:#3E4864; }
+
+/* ---------- help ---------- */
+.help-grid{ display:grid; gap:16px; }
+@media (min-width:1024px){ .help-grid{ grid-template-columns:1.3fr 1fr 1fr; } }
+.help-grid h3{ font-size:24px; margin-bottom:8px; padding-inline-end:54px; }
+.help-grid p{ font-size:16px; color:var(--on-navy-soft); }
+.help-grid .btn{ margin-top:18px; }
+.help-grid .ad:not(:first-child) .stamp-mark{ display:none; }
+.help-grid .ad:not(:first-child) h3{ padding-inline-end:0; }
+
+/* ---------- footer: bottom of the backboard ---------- */
+.foot{ padding-block:56px 40px; border-top:1px solid rgba(244,239,230,.16); }
+.foot .wrap{ display:grid; justify-items:center; text-align:center; gap:18px; }
+.foot .big-stamp{ width:150px; height:150px; color:var(--kraft); transform:rotate(-6deg); }
+.foot p{ color:var(--on-navy-soft); font-size:16px; }
+.foot ul{ list-style:none; margin:8px 0 0; padding:0; display:flex; flex-wrap:wrap; justify-content:center; gap:8px 22px; }
+.foot a{ font-size:16px; color:var(--on-navy); text-decoration:none; }
+.foot a:hover{ color:var(--kraft); text-decoration:underline; }
+.board-edge{ height:10px; background:var(--kraft); }
+
+.toast{ position:fixed; inset-inline:var(--gutter); bottom:16px; z-index:20; margin-inline:auto; max-width:420px;
+  background:var(--paper); color:var(--navy); padding:12px 16px; border-radius:3px; font-weight:500; font-size:16px;
+  box-shadow:0 12px 24px -10px rgba(5,8,18,.6); transform:translateY(160%); transition:transform 240ms cubic-bezier(.2,.8,.2,1); }
+.toast.show{ transform:none; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="ink" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" result="d"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.38" numOctaves="3" seed="11" result="m"/>
+      <feColorMatrix in="m" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -7 5.1" result="mask"/>
+      <feComposite in="d" in2="mask" operator="in"/>
+    </filter>
+    <path id="arc" d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"/>
+  </defs>
+  <symbol id="stamp" viewBox="0 0 120 120">
+    <g filter="url(#ink)" fill="currentColor" stroke="currentColor">
+      <circle cx="60" cy="60" r="56" fill="none" stroke-width="3.4"/>
+      <circle cx="60" cy="60" r="38" fill="none" stroke-width="1.6"/>
+      <text font-family="Alexandria, sans-serif" font-weight="700" font-size="11.5" stroke="none" letter-spacing="0">
+        <textPath href="#arc" startOffset="25%" text-anchor="middle">إسكندرية · بن محمصة</textPath>
+      </text>
+      <text x="60" y="61" text-anchor="middle" font-family="Alexandria, sans-serif" font-weight="900" font-size="25" stroke="none">مرسى</text>
+      <g fill="none" stroke-width="2.2" stroke-linecap="round">
+        <circle cx="60" cy="71" r="2.4"/>
+        <path d="M60 73.5v14M54.5 77.5h11M51 83.5q9 9 18 0"/>
+      </g>
+    </g>
+  </symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.2l2.1 10.2a1.6 1.6 0 0 0 1.6 1.3h8.3a1.6 1.6 0 0 0 1.6-1.2L20.5 8H6.1"/><circle cx="9.5" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></g></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></g></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M19 12H5M10 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4.5 19.5l1.2-3.6A8 8 0 1 1 8.6 18.6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <!-- grind particles, very fine to coarse -->
+  <symbol id="g-vfine" viewBox="0 0 200 44"><g fill="currentColor"><circle cx="8" cy="30" r="1.2"/><circle cx="14" cy="24" r="1.1"/><circle cx="20" cy="33" r="1.3"/><circle cx="26" cy="27" r="1"/><circle cx="31" cy="35" r="1.2"/><circle cx="37" cy="29" r="1.1"/><circle cx="43" cy="22" r="1.2"/><circle cx="48" cy="33" r="1"/><circle cx="54" cy="26" r="1.3"/><circle cx="60" cy="31" r="1.1"/><circle cx="66" cy="36" r="1.2"/><circle cx="71" cy="24" r="1"/><circle cx="77" cy="30" r="1.3"/><circle cx="83" cy="34" r="1.1"/><circle cx="89" cy="27" r="1.2"/><circle cx="95" cy="32" r="1"/><circle cx="101" cy="23" r="1.2"/><circle cx="106" cy="29" r="1.1"/><circle cx="112" cy="35" r="1.3"/><circle cx="118" cy="26" r="1"/><circle cx="124" cy="31" r="1.2"/><circle cx="130" cy="36" r="1.1"/><circle cx="135" cy="24" r="1.2"/><circle cx="141" cy="30" r="1"/><circle cx="147" cy="34" r="1.3"/><circle cx="153" cy="27" r="1.1"/><circle cx="159" cy="32" r="1.2"/><circle cx="165" cy="23" r="1"/><circle cx="171" cy="29" r="1.2"/><circle cx="177" cy="35" r="1.1"/><circle cx="183" cy="26" r="1.3"/><circle cx="189" cy="31" r="1"/><circle cx="194" cy="36" r="1.2"/><circle cx="11" cy="38" r="1"/><circle cx="34" cy="20" r="1"/><circle cx="58" cy="38" r="1"/><circle cx="86" cy="20" r="1"/><circle cx="109" cy="39" r="1"/><circle cx="138" cy="19" r="1"/><circle cx="162" cy="38" r="1"/><circle cx="186" cy="20" r="1"/></g></symbol>
+  <symbol id="g-fine" viewBox="0 0 200 44"><g fill="currentColor"><circle cx="10" cy="30" r="2"/><circle cx="20" cy="22" r="1.8"/><circle cx="29" cy="33" r="2.1"/><circle cx="40" cy="26" r="1.9"/><circle cx="50" cy="35" r="2"/><circle cx="60" cy="24" r="2.1"/><circle cx="71" cy="31" r="1.8"/><circle cx="82" cy="22" r="2"/><circle cx="92" cy="34" r="2.1"/><circle cx="103" cy="27" r="1.9"/><circle cx="114" cy="36" r="2"/><circle cx="124" cy="23" r="2.1"/><circle cx="135" cy="31" r="1.8"/><circle cx="146" cy="25" r="2"/><circle cx="157" cy="34" r="2.1"/><circle cx="168" cy="22" r="1.9"/><circle cx="178" cy="30" r="2"/><circle cx="189" cy="36" r="2.1"/></g></symbol>
+  <symbol id="g-mid" viewBox="0 0 200 44"><g fill="currentColor"><ellipse cx="14" cy="28" rx="3.6" ry="3"/><ellipse cx="33" cy="20" rx="3.2" ry="3.6"/><ellipse cx="50" cy="32" rx="3.8" ry="3.1"/><ellipse cx="70" cy="24" rx="3.3" ry="3.5"/><ellipse cx="90" cy="34" rx="3.6" ry="3"/><ellipse cx="108" cy="22" rx="3.4" ry="3.7"/><ellipse cx="128" cy="30" rx="3.7" ry="3.1"/><ellipse cx="148" cy="21" rx="3.2" ry="3.4"/><ellipse cx="166" cy="33" rx="3.8" ry="3.2"/><ellipse cx="186" cy="25" rx="3.4" ry="3.6"/></g></symbol>
+  <symbol id="g-coarse" viewBox="0 0 200 44"><g fill="currentColor"><path d="M14 22l6-2 4 5-2 7-7 1-4-5z"/><path d="M48 28l7-4 5 4-1 7-7 2-5-4z"/><path d="M84 18l7 1 3 6-4 6-7-1-3-6z"/><path d="M118 26l6-4 6 3 1 7-6 4-6-3z"/><path d="M152 20l7 0 4 6-3 6-7 1-4-6z"/><path d="M182 29l6-3 5 4-2 6-6 2-4-4z"/></g></symbol>
+</svg>
+
+<div class="strip">
+  <div class="wrap">
+    التحميصة الجاية: <b data-d="roast-full">الأحد ٢٩ نوفمبر</b><span class="sep"><span class="sr">،</span></span>اطلب لحد <span data-d="cutoff-day">السبت</span> ١١ بالليل <span class="tail">ويطلع لك <span data-d="out-day">الإثنين</span></span>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="مرسى، الصفحة الرئيسية">
+      <svg aria-hidden="true"><use href="#stamp"/></svg>
+      <span>مرسى</span>
+    </a>
+    <nav class="nav" aria-label="الأقسام">
+      <ul>
+        <li><a href="/shop/">المتجر</a></li>
+        <li><a href="/brew/">إزاي تعمل قهوتك</a></li>
+        <li><a href="/roastery/">المحمصة</a></li>
+        <li><a href="/wholesale/">للكافيهات والمكاتب</a></li>
+      </ul>
+    </nav>
+    <form class="search" role="search" action="/shop/">
+      <label class="sr" for="q">دوّر في البن</label>
+      <input id="q" name="s" type="search" placeholder="بتدوّر على بن إيه؟">
+      <svg aria-hidden="true"><use href="#i-search"/></svg>
+    </form>
+    <a class="icon-btn" href="/cart/" aria-label="السلة">
+      <svg aria-hidden="true"><use href="#i-cart"/></svg>
+      <span class="cart-count num" id="cartCount">٠</span>
+    </a>
+    <button class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="menu" id="menuBtn">
+      <svg aria-hidden="true"><use href="#i-menu"/></svg><span class="sr">القائمة</span>
+    </button>
+  </div>
+  <div class="menu-panel" id="menu" hidden>
+    <div class="wrap">
+      <a href="/shop/">المتجر</a>
+      <a href="/brew/">إزاي تعمل قهوتك</a>
+      <a href="/roastery/">المحمصة</a>
+      <a href="/wholesale/">للكافيهات والمكاتب</a>
+      <a href="/my-account/">حسابي</a>
+      <form class="search" role="search" action="/shop/">
+        <label class="sr" for="q2">دوّر في البن</label>
+        <input id="q2" name="s" type="search" placeholder="بتدوّر على بن إيه؟">
+        <svg aria-hidden="true"><use href="#i-search"/></svg>
+      </form>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+
+    <div class="pad" id="pad">
+      <span class="staple s1" aria-hidden="true"></span><span class="staple s2" aria-hidden="true"></span>
+      <div class="stub" aria-hidden="true">
+        <svg viewBox="0 0 400 26" preserveAspectRatio="none"><path fill="#F4EFE6" d="M0 0H400V17l-7 3-6-4-8 5-5-3-9 4-6-5-7 4-8-2-6 5-7-4-6 3-9-3-5 4-8-3-6 5-7-5-8 3-6-2-7 4-6-4-9 5-5-3-8 2-7-4-6 5-8-3-6 2-7-5-8 4-5-2-9 4-6-5-7 3-8-2-6 4-7-4-6 3-9-3-5 5-8-4-6 2-7-3-8 4-6-4-7 5-6-3-9 2-5-4-8 4-7-3-6 5-8-4-6 3-7-4-8 3-5-2-9 4-6-5-7 4-8-3-6 2-7-4-6 5-9-3-5 2-8-4-7 3-6-2V0z"/><path d="M0 8.5H400" stroke="#8C8A85" stroke-width="2.2" stroke-dasharray="1.6 7.4" stroke-linecap="round" opacity=".75"/></svg>
+      </div>
+      <div class="stack">
+        <div class="sheet grain" id="nextSheet">
+          <span class="perf" aria-hidden="true"></span>
+          <span class="day" data-d="roast-day">الأحد</span>
+          <span class="big red num" data-d="roast-num">٢٩</span>
+          <span class="mon" data-d="roast-month">نوفمبر</span>
+          <div class="rule" aria-hidden="true"></div>
+          <span class="label">التحميصة الجاية</span>
+          <span class="fine">اطلب لحد <span data-d="cutoff-day">السبت</span> ١١ بالليل<span class="sep"><span class="sr">،</span></span>يطلع لك <span data-d="out-day">الإثنين</span> <span data-d="out-num">٣٠</span></span>
+        </div>
+        <div class="sheet today grain" id="todaySheet" aria-hidden="true">
+          <span class="perf"></span>
+          <span class="day" data-d="today-day">الأربع</span>
+          <span class="big num red" data-d="today-num">٢٥</span>
+          <span class="mon" data-d="today-month">نوفمبر</span>
+          <div class="rule"></div>
+          <span class="label">النهارده</span>
+          <span class="fine" data-d="today-line">طلبات تحميصة النهارده قفلت امبارح ١١ بالليل</span>
+        </div>
+      </div>
+    </div>
+
+    <h1 id="h1">بن طازة، من المحمصة لكنكتك</h1>
+
+    <article class="ad panel" aria-labelledby="bestTitle">
+      <svg class="stamp-mark" aria-hidden="true"><use href="#stamp"/></svg>
+      <span class="sticker" aria-hidden="true"><span>يتحمّص<b class="num" data-d="roast-num">٢٩</b><span data-d="roast-month">نوفمبر</span></span></span>
+      <div class="panel-top">
+        <img src="../../content/photos/p_turkish_spiced-pixabay-7614369.jpg" width="1280" height="960" alt="كيس ورق كرافت بيقع منه بن محمّص على خلفية بيضا" decoding="async">
+        <div>
+          <h2 id="bestTitle">المحوّج بتاعنا</h2>
+          <p class="meta">بن تركي محوّج<span class="sep"><span class="sr">،</span></span>٢٥٠&nbsp;جم</p>
+          <div class="price-row"><span class="price num">٢٣٠<small>ج</small></span></div>
+        </div>
+      </div>
+      <form class="buy" data-product="بن تركي محوّج">
+        <div class="grind">
+          <label for="g-best">الطحنة</label>
+          <select id="g-best" name="grind" data-default="turkish">
+            <option value="whole">حبّ</option>
+            <option value="turkish" selected>تركي ناعم جدًا</option>
+            <option value="espresso">إسبريسو</option>
+            <option value="filter">فلتر وV60</option>
+            <option value="press">فرنش بريس</option>
+          </select>
+          <svg aria-hidden="true"><use href="#i-chev"/></svg>
+        </div>
+        <button class="btn" type="submit"><svg aria-hidden="true"><use href="#i-cart"/></svg><span>ضيف للسلة</span></button>
+      </form>
+      <p class="say">أكتر حاجة بتتطلب عندنا. بن تركي محمّص وسط لغامق، مطحون ناعم، وعليه حبهان مطحون معاه. اللي بيشربه الصبح مش بيغيّره.</p>
+    </article>
+
+    <div class="hero-more">
+      <p>بنحمّص مرتين في الأسبوع، الأحد والأربع، وبنطحن على طلبك. كل كيس عليه تاريخ تحميصه.</p>
+      <div class="actions">
+        <a class="btn" href="/shop/">اختار بنّك</a>
+        <a class="link" href="/brew/">إزاي تعمل قهوتك</a>
+      </div>
+    </div>
+
+    <div class="hero-mini" aria-hidden="true">
+      <h2>الأسبوع ده واللي بعده</h2>
+      <div class="month"><table class="cal" id="miniCal"></table></div>
+    </div>
+
+  </div>
+</section>
+
+<section class="sec" id="methods" aria-labelledby="mTitle" style="padding-top:clamp(32px,5vw,56px)">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="mTitle">بتعمل قهوتك بإيه؟</h2></div>
+    <div class="methods-grid">
+      <button class="ad method" type="button" data-filter="cezve">
+        <span class="m-name">كنكة</span>
+        <span class="m-grind">طحنة ناعمة جدًا</span>
+        <svg class="grains" aria-hidden="true" preserveAspectRatio="xMidYMid meet"><use href="#g-vfine"/></svg>
+        <span class="m-for">المحوّج، السادة، الغامق</span>
+        <span class="m-go">وريني البن ده<svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </button>
+      <button class="ad method" type="button" data-filter="espresso">
+        <span class="m-name">إسبريسو</span>
+        <span class="m-grind">طحنة ناعمة</span>
+        <svg class="grains" aria-hidden="true"><use href="#g-fine"/></svg>
+        <span class="m-for">خلطة المينا، البرازيلي، الكولومبي</span>
+        <span class="m-go">وريني البن ده<svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </button>
+      <button class="ad method" type="button" data-filter="filter">
+        <span class="m-name">فلتر وV60</span>
+        <span class="m-grind">طحنة وسط</span>
+        <svg class="grains" aria-hidden="true"><use href="#g-mid"/></svg>
+        <span class="m-for">الإثيوبي، الكولومبي</span>
+        <span class="m-go">وريني البن ده<svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </button>
+      <button class="ad method" type="button" data-filter="press">
+        <span class="m-name">فرنش بريس</span>
+        <span class="m-grind">طحنة خشنة</span>
+        <svg class="grains" aria-hidden="true"><use href="#g-coarse"/></svg>
+        <span class="m-for">البرازيلي، الكولومبي</span>
+        <span class="m-go">وريني البن ده<svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="coffees" aria-labelledby="cTitle" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="cTitle">بن تركي وبن من بلاد بعيدة</h2>
+      <a class="link" href="/shop/">كل البن</a>
+    </div>
+    <div class="filters" role="group" aria-label="اعرض البن حسب طريقتك">
+      <button class="chip" type="button" data-filter="all" aria-pressed="true">الكل</button>
+      <button class="chip" type="button" data-filter="cezve" aria-pressed="false">كنكة</button>
+      <button class="chip" type="button" data-filter="espresso" aria-pressed="false">إسبريسو</button>
+      <button class="chip" type="button" data-filter="filter" aria-pressed="false">فلتر وV60</button>
+      <button class="chip" type="button" data-filter="press" aria-pressed="false">فرنش بريس</button>
+    </div>
+    <p class="sr" id="filterStatus" aria-live="polite"></p>
+
+    <div class="catalog">
+    <div class="sheets" id="sheets">
+      <!-- 1 -->
+      <article class="csheet" data-methods="cezve">
+        <span class="perf" aria-hidden="true"></span>
+        <p class="roast-on"><span>يتحمّص <span data-d="roast-short">الأحد ٢٩</span></span></p>
+        <img src="../../content/photos/p_turkish_spiced-pixabay-7614369.jpg" width="1280" height="960" loading="lazy" decoding="async" alt="كيس ورق كرافت بيقع منه بن محمّص على خلفية بيضا">
+        <h3>بن تركي محوّج</h3>
+        <p class="origin">خلطة برازيلي وكولومبي</p>
+        <p class="roast-scale"><i aria-hidden="true"><b class="on"></b><b class="on"></b><b class="on"></b><b></b></i>وسط لغامق</p>
+        <p class="notes">حبهان، شيكولاتة غامقة</p>
+        <div class="foot"><span class="weight">٢٥٠&nbsp;جم</span><span class="price num">٢٣٠<small>ج</small></span></div>
+        <form class="buy" data-product="بن تركي محوّج">
+          <div class="grind"><label for="g1">الطحنة</label>
+            <select id="g1" name="grind" data-default="turkish"><option value="whole">حبّ</option><option value="turkish" selected>تركي ناعم جدًا</option><option value="espresso">إسبريسو</option><option value="filter">فلتر وV60</option><option value="press">فرنش بريس</option></select>
+            <svg aria-hidden="true"><use href="#i-chev"/></svg></div>
+          <button class="btn" type="submit"><svg aria-hidden="true"><use href="#i-cart"/></svg><span>ضيف للسلة</span></button>
+        </form>
+      </article>
+      <!-- 2 -->
+      <article class="csheet" data-methods="cezve">
+        <span class="perf" aria-hidden="true"></span>
+        <p class="roast-on"><span>يتحمّص <span data-d="roast-short">الأحد ٢٩</span></span></p>
+        <img src="../../content/photos/p_turkish_plain-pixabay-4668463.jpg" width="1280" height="853" loading="lazy" decoding="async" alt="بن محمّص ومغرفة خشب صغيرة على قماش كتان">
+        <h3>بن تركي سادة</h3>
+        <p class="origin">خلطة برازيلي وكولومبي</p>
+        <p class="roast-scale"><i aria-hidden="true"><b class="on"></b><b class="on"></b><b></b><b></b></i>وسط</p>
+        <p class="notes">مكسرات، كراميل</p>
+        <div class="foot"><span class="weight">٢٥٠&nbsp;جم</span><span class="price num">٢١٠<small>ج</small></span></div>
+        <form class="buy" data-product="بن تركي سادة">
+          <div class="grind"><label for="g2">الطحنة</label>
+            <select id="g2" name="grind" data-default="turkish"><option value="whole">حبّ</option><option value="turkish" selected>تركي ناعم جدًا</option><option value="espresso">إسبريسو</option><option value="filter">فلتر وV60</option><option value="press">فرنش بريس</option></select>
+            <svg aria-hidden="true"><use href="#i-chev"/></svg></div>
+          <button class="btn" type="submit"><svg aria-hidden="true"><use href="#i-cart"/></svg><span>ضيف للسلة</span></button>
+        </form>
+      </article>
+      <!-- 3 -->
+      <article class="csheet" data-methods="cezve">
+        <span class="perf" aria-hidden="true"></span>
+        <p class="roast-on"><span>يتحمّص <span data-d="roast-short">الأحد ٢٩</span></span></p>
+        <img src="../../content/photos/p_turkish_dark-pixabay-5447420.jpg" width="1280" height="853" loading="lazy" decoding="async" alt="بن محمّص غامق مفروش قريب">
+        <h3>بن تركي غامق</h3>
+        <p class="origin">برازيلي</p>
+        <p class="roast-scale"><i aria-hidden="true"><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b></i>غامق</p>
+        <p class="notes">كاكاو، مُر خفيف</p>
+        <div class="foot"><span class="weight">٢٥٠&nbsp;جم</span><span class="price num">٢٢٠<small>ج</small></span></div>
+        <form class="buy" data-product="بن تركي غامق">
+          <div class="grind"><label for="g3">الطحنة</label>
+            <select id="g3" name="grind" data-default="turkish"><option value="whole">حبّ</option><option value="turkish" selected>تركي ناعم جدًا</option><option value="espresso">إسبريسو</option><option value="filter">فلتر وV60</option><option value="press">فرنش بريس</option></select>
+            <svg aria-hidden="true"><use href="#i-chev"/></svg></div>
+          <button class="btn" type="submit"><svg aria-hidden="true"><use href="#i-cart"/></svg><span>ضيف للسلة</span></button>
+        </form>
+      </article>
+      <!-- 4 -->
+      <article class="csheet" data-methods="filter">
+        <span class="perf" aria-hidden="true"></span>
+        <p class="roast-on"><span>يتحمّص <span data-d="roast-short">الأحد ٢٩</span></span></p>
+        <img src="../../content/photos/p_ethiopia-pixabay-6632524.jpg" width="1280" height="812" loading="lazy" decoding="async" alt="حبّات بن محمّصة فاتح ووسط فوق بعض">
+        <h3>إثيوبي سيدامو</h3>
+        <p class="origin">إثيوبيا</p>
+        <p class="roast-scale"><i aria-hidden="true"><b class="on"></b><b></b><b></b><b></b></i>فاتح</p>
+        <p class="notes">ليمون، شاي، عسل</p>
+        <div class="foot"><span class="weight">٢٥٠&nbsp;جم</span><span class="price num">٥٦٠<small>ج</small></span></div>
+        <form class="buy" data-product="إثيوبي سيدامو">
+          <div class="grind"><label for="g4">الطحنة</label>
+            <select id="g4" name="grind" data-default="filter"><option value="whole">حبّ</option><option value="turkish">تركي ناعم جدًا</option><option value="espresso">إسبريسو</option><option value="filter" selected>فلتر وV60</option><option value="press">فرنش بريس</option></select>
+            <svg aria-hidden="true"><use href="#i-chev"/></svg></div>
+          <button class="btn" type="submit"><svg aria-hidden="true"><use href="#i-cart"/></svg><span>ضيف للسلة</span></button>
+        </form>
+      </article>
+      <!-- 5 -->
+      <article class="csheet" data-methods="espresso filter press">
+        <span class="perf" aria-hidden="true"></span>
+        <p class="roast-on"><span>يتحمّص <span data-d="roast-short">الأحد ٢٩</span></span></p>
+        <img src="../../content/photos/p_colombia-pixabay-1239226.jpg" width="1280" height="853" loading="lazy" decoding="async" alt="بن محمّص وسط لونه بني دافي">
+        <h3>كولومبي</h3>
+        <p class="origin">كولومبيا</p>
+        <p class="roast-scale"><i aria-hidden="true"><b class="on"></b><b class="on"></b><b></b><b></b></i>وسط</p>
+        <p class="notes">كراميل، شيكولاتة بلبن، تفاح</p>
+        <div class="foot"><span class="weight">٢٥٠&nbsp;جم</span><span class="price num">٤٨٠<small>ج</small></span></div>
+        <form class="buy" data-product="كولومبي">
+          <div class="grind"><label for="g5">الطحنة</label>
+            <select id="g5" name="grind" data-default="whole"><option value="whole" selected>حبّ</option><option value="turkish">تركي ناعم جدًا</option><option value="espresso">إسبريسو</option><option value="filter">فلتر وV60</option><option value="press">فرنش بريس</option></select>
+            <svg aria-hidden="true"><use href="#i-chev"/></svg></div>
+          <button class="btn" type="submit"><svg aria-hidden="true"><use href="#i-cart"/></svg><span>ضيف للسلة</span></button>
+        </form>
+      </article>
+      <!-- 6 -->
+      <article class="csheet" data-methods="espresso press">
+        <span class="perf" aria-hidden="true"></span>
+        <p class="roast-on"><span>يتحمّص <span data-d="roast-short">الأحد ٢٩</span></span></p>
+        <img src="../../content/photos/p_brazil-pixabay-9743627.jpg" width="1280" height="853" loading="lazy" decoding="async" alt="بن محمّص وسط لغامق مفروش">
+        <h3>برازيلي</h3>
+        <p class="origin">البرازيل</p>
+        <p class="roast-scale"><i aria-hidden="true"><b class="on"></b><b class="on"></b><b class="on"></b><b></b></i>وسط لغامق</p>
+        <p class="notes">مكسرات، كاكاو، حموضة قليلة</p>
+        <div class="foot"><span class="weight">٢٥٠&nbsp;جم</span><span class="price num">٤٢٠<small>ج</small></span></div>
+        <form class="buy" data-product="برازيلي">
+          <div class="grind"><label for="g6">الطحنة</label>
+            <select id="g6" name="grind" data-default="whole"><option value="whole" selected>حبّ</option><option value="turkish">تركي ناعم جدًا</option><option value="espresso">إسبريسو</option><option value="filter">فلتر وV60</option><option value="press">فرنش بريس</option></select>
+            <svg aria-hidden="true"><use href="#i-chev"/></svg></div>
+          <button class="btn" type="submit"><svg aria-hidden="true"><use href="#i-cart"/></svg><span>ضيف للسلة</span></button>
+        </form>
+      </article>
+      <!-- 7 -->
+      <article class="csheet" data-methods="espresso">
+        <span class="perf" aria-hidden="true"></span>
+        <p class="roast-on"><span>يتحمّص <span data-d="roast-short">الأحد ٢٩</span></span></p>
+        <img src="../../content/photos/p_espresso-pixabay-6603499.jpg" width="1280" height="853" loading="lazy" decoding="async" alt="حبّات بن غامقة لامعة قريبة أوي">
+        <h3>خلطة إسبريسو «المينا»</h3>
+        <p class="origin">برازيلي وإثيوبي</p>
+        <p class="roast-scale"><i aria-hidden="true"><b class="on"></b><b class="on"></b><b class="on"></b><b></b></i>وسط لغامق</p>
+        <p class="notes">شيكولاتة غامقة، بندق</p>
+        <div class="foot"><span class="weight">١&nbsp;كيلو</span><span class="price num">١٤٥٠<small>ج</small></span></div>
+        <form class="buy" data-product="خلطة إسبريسو المينا">
+          <div class="grind"><label for="g7">الطحنة</label>
+            <select id="g7" name="grind" data-default="espresso"><option value="whole">حبّ</option><option value="turkish">تركي ناعم جدًا</option><option value="espresso" selected>إسبريسو</option><option value="filter">فلتر وV60</option><option value="press">فرنش بريس</option></select>
+            <svg aria-hidden="true"><use href="#i-chev"/></svg></div>
+          <button class="btn" type="submit"><svg aria-hidden="true"><use href="#i-cart"/></svg><span>ضيف للسلة</span></button>
+        </form>
+      </article>
+    </div>
+
+    <div class="tools">
+      <h3>أدوات</h3>
+      <div class="tools-grid">
+        <article class="ad tool">
+          <svg class="stamp-mark" aria-hidden="true"><use href="#stamp"/></svg>
+          <img src="../../content/photos/p_cezve-pixabay-6720496.jpg" width="1280" height="854" loading="lazy" decoding="async" alt="كنك نحاس مطروق متعلّقة">
+          <div>
+            <h4>كنكة نحاس</h4>
+            <p>مقاس ٣ فناجين، يد خشب. النحاس بيوزّع الحرارة فالوش بيطلع حلو.</p>
+            <form class="row buy" data-product="كنكة نحاس" style="margin-top:12px">
+              <span class="price num">٣٨٠<small>ج</small></span>
+              <button class="btn" type="submit"><svg aria-hidden="true"><use href="#i-cart"/></svg><span>ضيف للسلة</span></button>
+            </form>
+          </div>
+        </article>
+        <article class="ad tool">
+          <svg class="stamp-mark" aria-hidden="true"><use href="#stamp"/></svg>
+          <img src="../../content/photos/p_dripper-pixabay-5712773.jpg" width="853" height="1280" loading="lazy" decoding="async" alt="قمع تقطير فيه بن والمية بتتصب عليه فوق إبريق">
+          <div>
+            <h4>قمع تقطير سيراميك</h4>
+            <p>لفلاتر الورق المخروطية، فنجان أو اتنين. الفلاتر مش معاه.</p>
+            <form class="row buy" data-product="قمع تقطير سيراميك" style="margin-top:12px">
+              <span class="price num">٤٥٠<small>ج</small></span>
+              <button class="btn" type="submit"><svg aria-hidden="true"><use href="#i-cart"/></svg><span>ضيف للسلة</span></button>
+            </form>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="sec" id="order" aria-labelledby="oTitle" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="oTitle">من التحميصة لباب بيتك</h2></div>
+    <div class="order-grid">
+      <div>
+        <div class="flip-pad" aria-hidden="true">
+          <div class="flip-stage" id="flipStage">
+            <div class="fsheet grain" data-step="2"><span class="perf"></span><span class="step">يوصلك</span><span class="fbig num" data-d="out-num">٣٠</span><span class="fday"><span data-d="out-day">الإثنين</span><span class="sep"><span class="sr">،</span></span><span data-d="out-month">نوفمبر</span></span><span class="fsub">إسكندرية نفس اليوم</span></div>
+            <div class="fsheet grain" data-step="1"><span class="perf"></span><span class="step">نحمّص</span><span class="fbig red num" data-d="roast-num">٢٩</span><span class="fday"><span data-d="roast-day">الأحد</span><span class="sep"><span class="sr">،</span></span><span data-d="roast-month">نوفمبر</span></span><span class="fsub">ونطحن بعدها على طول</span></div>
+            <div class="fsheet grain" data-step="0"><span class="perf"></span><span class="step">تطلب</span><span class="fbig num" data-d="today-num">٢٥</span><span class="fday">من النهارده</span><span class="fsub">لحد <span data-d="cutoff-day">السبت</span> <span data-d="cutoff-num">٢٨</span>، ١١ بالليل</span></div>
+          </div>
+        </div>
+        <ol class="steps" id="steps">
+          <li><button type="button" data-go="0" aria-pressed="true"><span class="s-name">تطلب</span><span class="s-when">لحد <span data-d="cutoff-day">السبت</span> ١١ بالليل</span><span class="s-text">تختار البن والطحنة، وتدفع كاش عند الاستلام أو بالكارت.</span></button></li>
+          <li><button type="button" data-go="1" aria-pressed="false"><span class="s-name">نحمّص</span><span class="s-when" data-d="roast-short">الأحد ٢٩</span><span class="s-text">طلبك يدخل في التحميصة الجاية، الأحد أو الأربع، ونطحنه بعدها على طول.</span></button></li>
+          <li><button type="button" data-go="2" aria-pressed="false"><span class="s-name">يوصلك</span><span class="s-when" data-d="out-short">الإثنين ٣٠</span><span class="s-text">يطلع تاني يوم. في إسكندرية بيوصل نفس اليوم بـ٥٠ جنيه، وباقي المحافظات من ٢ لـ٤ أيام بـ٨٥ جنيه.</span></button></li>
+        </ol>
+      </div>
+      <div>
+        <div class="month grain">
+          <div class="month-title"><h3 data-d="cal-title">نوفمبر ٢٠٢٦</h3><span>الأحد والأربع أيام تحميص</span></div>
+          <table class="cal" id="cal" aria-describedby="calLegend"></table>
+          <p class="legend" id="calLegend"><span><i class="l-t"></i>النهارده</span><span><i class="l-c"></i>آخر ميعاد للطلب</span><span><i class="l-r"></i>التحميصة الجاية</span><span><i class="l-o"></i>يطلع لك</span></p>
+        </div>
+        <p class="ship-note">الدفع كاش عند الاستلام أو بالكارت.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="brew" aria-labelledby="bTitle" style="padding-top:0">
+  <div class="wrap">
+    <div class="back">
+      <span class="ghost num" aria-hidden="true" data-d="roast-num">٢٩</span>
+      <div>
+        <h2 id="bTitle">فنجان تركي زي ما بنعمله في المحمصة</h2>
+        <ol>
+          <li>معلقة كبيرة بن لكل فنجان، ومية ساقعة.</li>
+          <li>على نار هادية، وقلّب مرة واحدة بس في الأول.</li>
+          <li>أول ما الوش يعلى، شيلها من على النار وصبّ على طول.</li>
+        </ol>
+        <a class="more" href="/brew/">كل الطرق: كنكة، V60، إسبريسو، فرنش بريس</a>
+      </div>
+      <figure>
+        <img src="../../content/photos/bestseller-pixabay-161847.jpg" width="1280" height="850" loading="lazy" decoding="async" alt="كنكة نحاس وفنجان قهوة وكوباية مية على ترابيزة في بلكونة">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="cafes" aria-labelledby="kTitle" style="padding-top:0">
+  <div class="wrap">
+    <div class="weekly grain">
+      <div>
+        <h2 id="kTitle">عندك كافيه أو مكتب؟</h2>
+        <p>بنبيع بالكيلو، وبنحمّص الخلطة على مزاجكم. ابعتلنا هتحتاجوا قد إيه في الأسبوع ونتكلم.</p>
+        <a class="btn" href="/wholesale/">ابعت طلب</a>
+      </div>
+      <div>
+        <div class="week" aria-label="أيام التحميص في الأسبوع: الأحد والأربع">
+          <div><span class="wd"><span class="l">السبت</span><span class="s">سبت</span></span></div>
+          <div class="r"><span class="wd"><span class="l">الأحد</span><span class="s">حد</span></span><span class="dot" aria-hidden="true"></span><span class="wl">تحميص</span></div>
+          <div><span class="wd"><span class="l">الإثنين</span><span class="s">اتنين</span></span></div>
+          <div><span class="wd"><span class="l">التلات</span><span class="s">تلات</span></span></div>
+          <div class="r"><span class="wd"><span class="l">الأربع</span><span class="s">أربع</span></span><span class="dot" aria-hidden="true"></span><span class="wl">تحميص</span></div>
+          <div><span class="wd"><span class="l">الخميس</span><span class="s">خميس</span></span></div>
+          <div><span class="wd"><span class="l">الجمعة</span><span class="s">جمعة</span></span></div>
+        </div>
+        <p class="week-cap">كل أسبوع تحميصتين، وطلبكم يطلع تاني يوم.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="help" aria-labelledby="hTitle" style="padding-top:0">
+  <div class="wrap">
+    <h2 id="hTitle" class="sr">مساعدة</h2>
+    <div class="help-grid">
+      <div class="ad">
+        <svg class="stamp-mark" aria-hidden="true"><use href="#stamp"/></svg>
+        <h3>محتار تختار؟</h3>
+        <p>ابعتلنا على واتساب بتعمل قهوتك بإيه وبتحبها إزاي، ونرشّحلك.</p>
+        <a class="btn" href="#"><svg aria-hidden="true"><use href="#i-chat"/></svg><span>اسألنا على واتساب</span></a>
+      </div>
+      <div class="ad"><h3>الدفع</h3><p>كاش عند الاستلام أو بالكارت.</p></div>
+      <div class="ad"><h3>لو هترجّع</h3><p>الكيس المقفول يترجع خلال ٧ أيام من الاستلام. البن المطحون مبيترجعش، إلا لو إحنا اللي طحناه غلط، ساعتها نبدّله.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <svg class="big-stamp" role="img" aria-label="ختم مرسى، محمصة بن، إسكندرية"><use href="#stamp"/></svg>
+    <p>محمصة بن صغيرة في إسكندرية. بنحمّص الأحد والأربع.</p>
+    <ul>
+      <li><a href="/shop/">المتجر</a></li>
+      <li><a href="/brew/">إزاي تعمل قهوتك</a></li>
+      <li><a href="/roastery/">المحمصة</a></li>
+      <li><a href="/wholesale/">للكافيهات والمكاتب</a></li>
+      <li><a href="/policies/">السياسات</a></li>
+      <li><a href="/my-account/">حسابي</a></li>
+      <li><a href="/cart/">السلة</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="board-edge" aria-hidden="true"></div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ============================================================
+   Roast rule
+   Roast days: Sunday and Wednesday. An order counts for a roast
+   until 11 pm the day before it. The order goes out the day after
+   the roast.
+
+   MOCKUP: "now" is fixed to Wednesday 25 November 2026, 2 pm.
+   To go live, replace MOCK_NOW with the real time in Alexandria:
+     const NOW = cairoNow();
+   (or render the same values on the server from the store's clock,
+   so the page is right before any script runs).
+   ============================================================ */
+const MOCK_NOW = new Date(2026, 10, 25, 14, 0);
+const NOW = MOCK_NOW;
+
+function cairoNow(){
+  // Wall-clock time in Africa/Cairo, whatever the visitor's own zone is.
+  const p = Object.fromEntries(new Intl.DateTimeFormat('en-GB', {
+    timeZone:'Africa/Cairo', year:'numeric', month:'2-digit', day:'2-digit',
+    hour:'2-digit', minute:'2-digit', hourCycle:'h23'
+  }).formatToParts(new Date()).map(x => [x.type, x.value]));
+  return new Date(+p.year, +p.month - 1, +p.day, +p.hour, +p.minute);
+}
+
+const ROAST_DAYS = [0, 3];      // Sunday, Wednesday
+const CUTOFF_HOUR = 23;         // 11 pm, the day before the roast
+
+function addDays(d, n){ return new Date(d.getFullYear(), d.getMonth(), d.getDate() + n); }
+
+function roastPlan(now){
+  for (let i = 0; i < 14; i++){
+    const day = addDays(now, i);
+    if (!ROAST_DAYS.includes(day.getDay())) continue;
+    const cutoff = addDays(day, -1); cutoff.setHours(CUTOFF_HOUR, 0, 0, 0);
+    if (now < cutoff) return { today:addDays(now, 0), cutoff, roast:day, out:addDays(day, 1) };
+  }
+}
+
+const DAY = ['الأحد','الإثنين','التلات','الأربع','الخميس','الجمعة','السبت'];
+const DAY_SHORT = ['حد','اتنين','تلات','أربع','خميس','جمعة','سبت'];
+const MONTH = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
+const ar = n => String(n).replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+const same = (a, b) => a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+
+const plan = roastPlan(NOW);
+const values = {
+  'roast-day':   DAY[plan.roast.getDay()],
+  'roast-num':   ar(plan.roast.getDate()),
+  'roast-month': MONTH[plan.roast.getMonth()],
+  'roast-full':  `${DAY[plan.roast.getDay()]} ${ar(plan.roast.getDate())} ${MONTH[plan.roast.getMonth()]}`,
+  'roast-short': `${DAY[plan.roast.getDay()]} ${ar(plan.roast.getDate())}`,
+  'cutoff-day':  DAY[plan.cutoff.getDay()],
+  'cutoff-num':  ar(plan.cutoff.getDate()),
+  'out-day':     DAY[plan.out.getDay()],
+  'out-num':     ar(plan.out.getDate()),
+  'out-month':   MONTH[plan.out.getMonth()],
+  'out-short':   `${DAY[plan.out.getDay()]} ${ar(plan.out.getDate())}`,
+  'today-day':   DAY[NOW.getDay()],
+  'today-num':   ar(NOW.getDate()),
+  'today-month': MONTH[NOW.getMonth()],
+  'today-line':  ROAST_DAYS.includes(NOW.getDay()) ? 'طلبات تحميصة النهارده قفلت امبارح ١١ بالليل' : 'النهارده مفيش تحميص',
+  'cal-title':   `${MONTH[NOW.getMonth()]} ${ar(NOW.getFullYear())}`
+};
+document.querySelectorAll('[data-d]').forEach(el => {
+  const v = values[el.dataset.d]; if (v) el.textContent = v;
+});
+// today's numeral is red only when today is itself a roast day
+document.querySelector('[data-d="today-num"]').classList.toggle('red', ROAST_DAYS.includes(NOW.getDay()));
+
+/* ---------- month grid (week starts Saturday, as on Egyptian calendars) ---------- */
+function buildCal(table, from, to, withTags){
+  const col = d => (d.getDay() + 1) % 7;               // Saturday = column 0
+  let html = '<thead><tr>';
+  for (let c = 0; c < 7; c++){ const wd = (c + 6) % 7; html += `<th scope="col" class="${ROAST_DAYS.includes(wd) ? 'r' : ''}">${DAY_SHORT[wd]}</th>`; }
+  html += '</tr></thead><tbody><tr>';
+  let d = addDays(from, -col(from));
+  const end = addDays(to, 6 - col(to));
+  while (d <= end){
+    if (col(d) === 0 && d > addDays(from, -col(from))) html += '</tr><tr>';
+    const inRange = d >= from && d <= to;
+    const cls = [];
+    let tag = '';
+    if (!inRange){ html += '<td></td>'; d = addDays(d, 1); continue; }
+    if (d < plan.today) cls.push('past');
+    if (ROAST_DAYS.includes(d.getDay())) cls.push('roastday');
+    if (same(d, plan.today)){ cls.push('today'); tag = 'النهارده'; }
+    if (same(d, plan.cutoff)){ cls.push('cutoff'); tag = '١١ بالليل'; }
+    if (same(d, plan.roast)){ cls.push('next'); tag = 'تحميص'; }
+    if (same(d, plan.out)){ cls.push('out'); tag = 'يطلع'; }
+    const label = `${DAY[d.getDay()]} ${ar(d.getDate())} ${MONTH[d.getMonth()]}${tag ? '، ' + tag : ''}`;
+    html += `<td class="${cls.join(' ')}"><span class="d num" aria-label="${label}">${ar(d.getDate())}</span>${withTags && tag ? `<span class="tag" aria-hidden="true">${tag}</span>` : ''}</td>`;
+    d = addDays(d, 1);
+  }
+  html += '</tr></tbody>';
+  table.innerHTML = html;
+}
+// full month of today, extended to the out day if it falls in the next month
+const monthStart = new Date(NOW.getFullYear(), NOW.getMonth(), 1);
+const monthEnd = new Date(NOW.getFullYear(), NOW.getMonth() + 1, 0);
+buildCal(document.getElementById('cal'), monthStart, plan.out > monthEnd ? plan.out : monthEnd, true);
+// hero: this week and the next
+const wkStart = addDays(plan.today, -((plan.today.getDay() + 1) % 7));
+buildCal(document.getElementById('miniCal'), wkStart, addDays(wkStart, 13), true);
+
+/* ---------- the tear: today's sheet comes off to show the next roast ---------- */
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+// ?still: review captures only. Shows the settled page (sheet already torn, images loaded).
+const still = /[?&]still/.test(location.search);
+if (still) document.querySelectorAll('img[loading="lazy"]').forEach(i => i.loading = 'eager');
+const todaySheet = document.getElementById('todaySheet');
+const pad = document.getElementById('pad');
+if (same(plan.today, plan.roast) || reduce || still){
+  todaySheet.remove(); pad.classList.add('torn');
+} else {
+  const tear = () => {
+    todaySheet.classList.add('tearing');
+    todaySheet.addEventListener('animationend', e => {
+      if (e.target !== todaySheet) return;
+      todaySheet.classList.add('gone'); pad.classList.add('torn');
+    }, { once:false });
+  };
+  const go = () => setTimeout(tear, 650);
+  (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(go);
+}
+
+/* ---------- order pad: sheets flip order day, roast day, out day ---------- */
+const sheets = [...document.querySelectorAll('#flipStage .fsheet')].sort((a, b) => a.dataset.step - b.dataset.step);
+const stepBtns = [...document.querySelectorAll('#steps [data-go]')];
+sheets.forEach((s, i) => s.style.zIndex = 10 - i);
+let current = 0;
+function showStep(n){
+  sheets.forEach((s, i) => {
+    if (i < n){ s.classList.add('flipped'); s.classList.remove('down'); }
+    else { if (s.classList.contains('flipped')){ s.classList.remove('flipped'); s.classList.add('down'); } }
+  });
+  stepBtns.forEach((b, i) => b.setAttribute('aria-pressed', i === n));
+  current = n;
+}
+stepBtns.forEach(b => b.addEventListener('click', () => { autoplay = false; showStep(+b.dataset.go); }));
+let autoplay = !reduce;
+if ('IntersectionObserver' in window){
+  const io = new IntersectionObserver(es => {
+    if (!es[0].isIntersecting) return;
+    io.disconnect();
+    if (!autoplay) return;
+    setTimeout(() => autoplay && showStep(1), 700);
+    setTimeout(() => autoplay && showStep(2), 1800);
+  }, { threshold:.6 });
+  io.observe(document.getElementById('flipStage'));
+}
+
+/* ---------- methods filter the pad and preset the grind ---------- */
+const GRIND_FOR = { cezve:'turkish', espresso:'espresso', filter:'filter', press:'press' };
+const NAME_FOR = { all:'كل البن', cezve:'الكنكة', espresso:'الإسبريسو', filter:'الفلتر وV60', press:'الفرنش بريس' };
+const cards = [...document.querySelectorAll('.csheet')];
+function filterBy(key){
+  let shown = 0;
+  cards.forEach(c => {
+    const ok = key === 'all' || c.dataset.methods.split(' ').includes(key);
+    c.hidden = !ok; if (ok) shown++;
+    const sel = c.querySelector('select');
+    sel.value = key === 'all' ? sel.dataset.default : GRIND_FOR[key];
+  });
+  document.querySelectorAll('.chip').forEach(ch => ch.setAttribute('aria-pressed', ch.dataset.filter === key));
+  document.getElementById('filterStatus').textContent = key === 'all' ? `معروض ${ar(shown)} أنواع بن` : `${ar(shown)} أنواع تنفع في ${NAME_FOR[key]}، والطحنة متظبطة عليها`;
+  document.getElementById('sheets').scrollTo({ left:0 });
+}
+document.querySelectorAll('.chip').forEach(ch => ch.addEventListener('click', () => filterBy(ch.dataset.filter)));
+document.querySelectorAll('.method').forEach(m => m.addEventListener('click', () => {
+  filterBy(m.dataset.filter);
+  document.getElementById('coffees').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block:'start' });
+}));
+
+/* ---------- cart (mockup: visual feedback only) ---------- */
+let count = 0;
+const countEl = document.getElementById('cartCount');
+const toast = document.getElementById('toast');
+let toastTimer;
+document.querySelectorAll('form.buy').forEach(f => f.addEventListener('submit', e => {
+  e.preventDefault();
+  const sel = f.querySelector('select');
+  const grind = sel ? sel.options[sel.selectedIndex].text : '';
+  count++; countEl.textContent = ar(count);
+  countEl.classList.remove('bump'); void countEl.offsetWidth; countEl.classList.add('bump');
+  const btn = f.querySelector('button[type="submit"]');
+  const label = btn.querySelector('span');
+  btn.dataset.added = ''; label.textContent = 'اتضاف للسلة';
+  btn.querySelector('use').setAttribute('href', '#i-check');
+  setTimeout(() => { delete btn.dataset.added; label.textContent = 'ضيف للسلة'; btn.querySelector('use').setAttribute('href', '#i-cart'); }, 2200);
+  toast.textContent = sel
+    ? `اتضاف ${f.dataset.product}، طحنة ${grind}. يتحمّص ${values['roast-short']}.`
+    : `اتضاف ${f.dataset.product}. يطلع مع طلبك ${values['out-short']}.`;
+  toast.classList.add('show'); clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 3200);
+}));
+
+/* ---------- menu ---------- */
+const menuBtn = document.getElementById('menuBtn'), menu = document.getElementById('menu');
+menuBtn.addEventListener('click', () => {
+  const open = menuBtn.getAttribute('aria-expanded') === 'true';
+  menuBtn.setAttribute('aria-expanded', !open); menu.hidden = open;
+});
+</script>
+</body>
+</html>

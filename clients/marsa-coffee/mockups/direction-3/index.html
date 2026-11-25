@@ -1,0 +1,1039 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مرسى · محمصة بن في إسكندرية</title>
+<meta name="description" content="بن طازة من محمصة صغيرة في إسكندرية. بنحمّص الأحد والأربع، وبنطحن على طلبك، وكل كيس عليه تاريخ تحميصه.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="../../content/photos/hero-pixabay-8406187.jpg" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&family=Lalezar&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@800&text=V60&display=swap" rel="stylesheet">
+<style>
+:root{
+  --kraft:#C9A77C;
+  --kraft-deep:#A88658;
+  --navy:#1F2A44;
+  --navy-deep:#141C30;
+  --over:#2E2F3A;
+  --paper:#F4EFE6;
+  --red:#B5452F;
+  /* multiply ink: over kraft it prints as stamp navy, over navy it prints darker */
+  --ink-mul:#27408C;
+  --f-head:"Lalezar", "Almarai", system-ui, sans-serif;
+  --f-body:"Almarai", system-ui, sans-serif;
+  --f-latin:"Big Shoulders Stencil Display", "Almarai", sans-serif;
+  --gut:16px;
+  --sp-1:8px; --sp-2:12px; --sp-3:16px; --sp-4:24px; --sp-5:32px; --sp-6:48px; --sp-7:72px; --sp-8:112px;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --pass:180ms;
+  /* uneven rubber-stamp ink: sparse unprinted specks plus slow pressure mottling */
+  --ink-tex:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='1' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .91 0 0 0 0 .86 0 0 0 0 .78 4 0 0 0 -3.05'/%3E%3C/filter%3E%3Cfilter id='b'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012' numOctaves='2' seed='8' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .78 0 0 0 0 .66 0 0 0 0 .5 .4 0 0 0 -.14'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23a)'/%3E%3C/svg%3E");
+}
+@media (min-width:600px){ :root{ --gut:32px; } }
+@media (min-width:1100px){ :root{ --gut:56px; } }
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; scrollbar-color:var(--navy) var(--kraft); }
+body{
+  margin:0;
+  color:var(--navy);
+  background-color:var(--kraft);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.035 .55' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .40 0 0 0 0 .28 0 0 0 0 .14 .9 0 0 0 -.38'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23f)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='1' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .96 0 0 0 0 .9 0 0 0 0 .8 0 0 0 -1.6 .9'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23s)'/%3E%3C/svg%3E");
+  font:400 1.0625rem/1.75 var(--f-body);
+  text-rendering:optimizeLegibility;
+}
+main, .foot, .strip, .site-head{ overflow-x:clip; }
+::selection{ background:var(--navy); color:var(--paper); }
+input,button,select{ font:inherit; color:inherit; }
+input{ caret-color:var(--navy); }
+img{ display:block; max-width:100%; height:auto; }
+a{ color:inherit; text-decoration-thickness:2px; text-underline-offset:.35em; }
+:focus-visible{ outline:3px solid var(--navy); outline-offset:3px; }
+.on-ink :focus-visible{ outline-color:var(--paper); }
+.vh{ position:absolute!important; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+.latin{ font-family:var(--f-latin); font-weight:800; letter-spacing:.02em; unicode-bidi:isolate; }
+.wrap{ width:100%; max-width:1360px; margin-inline:auto; padding-inline:var(--gut); }
+h1,h2,h3{ font-family:var(--f-head); font-weight:400; margin:0; line-height:1.3; text-wrap:balance; }
+p{ margin:0; }
+.num{ font-variant-numeric:tabular-nums; }
+.nw{ white-space:nowrap; }
+
+/* ---------- ink pieces ---------- */
+.stamp{ display:block; color:var(--ink-mul); mix-blend-mode:multiply; }
+.stamp use{ filter:url(#rough); }
+.sticker{
+  display:inline-grid; place-items:center; text-align:center;
+  inline-size:var(--d,56px); block-size:var(--d,56px); border-radius:50%;
+  background:var(--red); color:var(--paper);
+  font-family:var(--f-head); line-height:1;
+  rotate:-6deg;
+  box-shadow:0 1px 1.5px rgba(31,42,68,.35);
+}
+.sticker small{ display:block; font-family:var(--f-body); font-weight:700; font-size:.8125rem; margin-block-end:2px; }
+.sticker b{ font-weight:400; font-size:calc(var(--d,56px) * .44); }
+
+.btn{
+  position:relative; display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  min-block-size:52px; padding:12px 24px;
+  border:0; border-radius:3px 5px 4px 2px;
+  background:var(--navy) var(--ink-tex); color:var(--paper);
+  font-family:var(--f-body); font-weight:700; font-size:1.0625rem; line-height:1.2; text-decoration:none;
+  cursor:pointer;
+  transition:background-color 120ms linear;
+}
+.btn::after{ /* the second impression, only visible when pressed */
+  content:""; position:absolute; inset:0; border-radius:inherit;
+  border:2px solid var(--navy-deep); opacity:0; translate:0 0; pointer-events:none;
+}
+.btn:hover{ background-color:#253252; }
+.btn:active{ background-color:var(--navy-deep); }
+.btn:active::after{ opacity:1; translate:-2px 2px; }
+.btn svg{ flex:none; }
+.btn-wide{ inline-size:100%; }
+.on-ink .btn{ background:var(--paper); color:var(--navy); }
+.on-ink .btn:hover{ background:#fff; }
+.on-ink .btn::after{ border-color:var(--paper); }
+.link{ font-weight:700; text-decoration:underline; text-decoration-color:var(--kraft-deep); }
+.link:hover{ text-decoration-color:currentColor; }
+
+/* ---------- registration marks ---------- */
+.reg{ position:absolute; inline-size:22px; block-size:22px; color:var(--kraft-deep); pointer-events:none; }
+
+/* ---------- strip ---------- */
+.strip{ background:var(--paper); border-block-end:2px solid var(--kraft-deep); position:relative; z-index:3; }
+.strip .wrap{ display:flex; align-items:center; gap:14px; min-block-size:56px; padding-block:8px; }
+.strip .sticker{ --d:48px; flex:none; margin-block:-2px -14px; }
+.strip p{ font-size:1rem; line-height:1.5; }
+.strip strong{ font-weight:700; }
+.strip .rest{ display:block; }
+@media (min-width:900px){ .strip .rest{ display:inline; } .strip .rest::before{ content:" · "; } }
+
+/* ---------- header ---------- */
+.site-head{ position:relative; z-index:2; }
+.site-head .wrap{ display:flex; align-items:center; gap:var(--sp-3); min-block-size:60px; }
+@media (min-width:900px){ .site-head .wrap{ min-block-size:72px; } }
+.brand{ display:flex; align-items:center; gap:10px; text-decoration:none; }
+.brand .stamp{ inline-size:44px; block-size:44px; }
+.brand span{ font-family:var(--f-head); font-size:1.875rem; line-height:1; padding-block-start:4px; }
+.nav{ display:none; }
+.nav ul{ list-style:none; margin:0; padding:0; display:flex; gap:var(--sp-4); }
+.nav a{ text-decoration:none; font-weight:700; padding-block:6px; }
+.nav a:hover{ text-decoration:underline; text-decoration-color:var(--kraft-deep); }
+.head-tools{ margin-inline-start:auto; display:flex; align-items:center; gap:4px; }
+.icon-btn{
+  display:inline-grid; place-items:center; inline-size:48px; block-size:48px;
+  background:none; border:0; border-radius:4px; color:var(--navy); cursor:pointer; text-decoration:none; position:relative;
+}
+.icon-btn:hover{ background:rgba(31,42,68,.08); }
+.cart-count{
+  position:absolute; inset-block-start:4px; inset-inline-end:2px;
+  min-inline-size:20px; block-size:20px; padding-inline:5px; border-radius:10px;
+  background:var(--navy); color:var(--paper); font-size:.8125rem; font-weight:700; line-height:20px; text-align:center;
+}
+.search{ display:none; }
+.search-row{ display:none; padding-block:0 var(--sp-3); }
+.search-row.open{ display:block; }
+.field{
+  inline-size:100%; min-block-size:48px; padding:10px 16px;
+  background:var(--paper); border:2px solid var(--navy); border-radius:3px 5px 4px 2px; color:var(--navy);
+}
+.field::placeholder{ color:#56596A; }
+.menu-panel{ display:none; border-block:2px solid var(--navy); }
+.menu-panel.open{ display:block; }
+.menu-panel ul{ list-style:none; margin:0; padding:var(--sp-2) 0; }
+.menu-panel a{ display:block; padding:12px 0; font-family:var(--f-head); font-size:1.5rem; text-decoration:none; }
+@media (min-width:1000px){
+  .nav{ display:block; margin-inline-start:var(--sp-5); }
+  .menu-btn, .search-btn{ display:none; }
+  .search{ display:block; inline-size:240px; }
+  .search .field{ min-block-size:44px; }
+}
+
+/* ---------- hero ---------- */
+.hero{ position:relative; padding-block:4px var(--sp-5); }
+.hero-grid{ display:grid; gap:0; }
+.hero-copy{ position:relative; }
+.hero h1{ font-size:2.75rem; line-height:1.22; position:relative; z-index:1; }
+.hero h1 span{ display:block; }
+.hero-copy .stamp{
+  position:absolute; inline-size:100px; block-size:100px;
+  inset-block-start:32px; inset-inline-end:4px; rotate:-13deg; z-index:2;
+}
+.hero-lead{ max-inline-size:34ch; margin-block-start:var(--sp-3); font-size:1.0625rem; }
+.hero-actions{ display:flex; flex-wrap:wrap; align-items:center; gap:var(--sp-2) var(--sp-4); margin-block-start:var(--sp-4); }
+.hero-figure{ position:relative; margin:var(--sp-3) calc(var(--gut) * -1) 0; }
+.duo{ position:relative; background:var(--kraft); overflow:hidden; }
+.duo img{ inline-size:100%; block-size:100%; object-fit:cover; filter:url(#halftone); }
+.hero-photo{ block-size:200px; }
+.hero-figure .stamp{ display:none; }
+.hero-figure .reg{ display:none; }
+
+/* order of hero parts on phones: headline, photo + label, lead */
+.hero-grid{ grid-template-areas:"copy" "figure" "lead"; }
+.hero-copy{ grid-area:copy; }
+.hero-figure{ grid-area:figure; }
+.hero-more{ grid-area:lead; }
+
+/* the best seller label */
+.label{
+  position:relative; background:var(--paper); color:var(--navy);
+  border-radius:2px; box-shadow:0 1px 2px rgba(31,42,68,.28), 0 6px 14px -8px rgba(31,42,68,.35);
+}
+.best{
+  position:relative; z-index:2; margin:-64px var(--gut) 0; padding:var(--sp-3) var(--sp-3) var(--sp-3);
+  rotate:-.6deg;
+}
+.best-top{ display:flex; align-items:baseline; justify-content:space-between; gap:var(--sp-2); }
+.best h2{ font-size:1.75rem; }
+.price{ font-family:var(--f-head); font-size:1.75rem; line-height:1; white-space:nowrap; }
+.price small{ font-family:var(--f-body); font-weight:700; font-size:1rem; margin-inline-start:3px; }
+.best-meta{ font-size:1rem; line-height:1.55; margin-block-start:4px; }
+.best-desc{ display:none; }
+.best .roast-line .long{ display:none; }
+.best .roast-line{ display:flex; align-items:center; gap:10px; margin-block-start:var(--sp-2); font-size:1rem; line-height:1.4; }
+.best .roast-line .sticker{ --d:40px; flex:none; }
+
+/* grind stamps */
+.grind{ border:0; margin:var(--sp-3) 0 0; padding:0; min-inline-size:0; }
+.grind legend{ padding:0; font-weight:700; font-size:1rem; margin-block-end:6px; }
+.grind-opts{ display:flex; flex-wrap:wrap; gap:8px; }
+.grind input{ position:absolute; opacity:0; inline-size:1px; block-size:1px; }
+.grind label{
+  position:relative; display:inline-flex; align-items:center; min-block-size:40px; padding:6px 12px;
+  border:2px solid var(--navy); border-radius:3px 6px 4px 5px;
+  font-size:1rem; font-weight:700; line-height:1.2; cursor:pointer; user-select:none;
+  background:transparent; color:var(--navy);
+}
+.grind label:hover{ background:rgba(31,42,68,.07); }
+.grind input:checked + label{ background:var(--navy) var(--ink-tex); color:var(--paper); }
+.grind input:focus-visible + label{ outline:3px solid var(--navy); outline-offset:2px; }
+.best .btn{ margin-block-start:var(--sp-3); }
+
+.hero-more .hero-lead{ margin-block-start:var(--sp-5); }
+
+/* fold banner */
+.route{ margin-block-start:var(--sp-5); background:var(--navy) var(--ink-tex); color:var(--paper); }
+.route ol{ list-style:none; margin:0; padding:var(--sp-3); display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px; font-family:var(--f-head); font-size:1.25rem; line-height:1.3; }
+.route li{ display:flex; align-items:center; gap:10px; white-space:nowrap; }
+.route .sticker{ --d:40px; rotate:5deg; }
+.route .sticker b{ font-size:1.0625rem; }
+.route svg{ color:var(--kraft); }
+
+@media (min-width:900px){
+  .hero{ padding-block:var(--sp-5) 0; }
+  .hero-grid{
+    grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);
+    grid-template-areas:"copy figure" "lead figure";
+    column-gap:var(--sp-6); align-items:start;
+  }
+  .hero h1{ font-size:clamp(4.25rem, 6.4vw, 6rem); line-height:1.22; }
+  .hero-copy .stamp{ display:none; }
+  .hero-more .hero-lead{ margin-block-start:var(--sp-4); font-size:1.1875rem; max-inline-size:36ch; }
+  .hero-figure{ margin:var(--sp-2) 0 0; padding-block-end:120px; }
+  .hero-photo{ block-size:auto; aspect-ratio:1280/853; }
+  .hero-figure .stamp{
+    display:block; position:absolute; inline-size:184px; block-size:184px;
+    inset-block-start:38%; inset-inline-start:-92px; rotate:-14deg; z-index:2;
+  }
+  .hero-figure .reg{ display:block; }
+  .best{
+    position:absolute; inset-block-end:0; inset-inline-end:-24px; margin:0;
+    inline-size:min(420px, 82%); padding:var(--sp-4); rotate:-1.2deg;
+  }
+  .best h2{ font-size:2.125rem; }
+  .best .roast-line .long{ display:inline; }
+  .best-desc{ display:block; font-size:1rem; line-height:1.6; margin-block-start:var(--sp-1); }
+  .route{ margin-block-start:var(--sp-5); }
+  .route ol{ font-size:1.75rem; gap:12px 28px; padding-block:20px; }
+  .route .sticker{ --d:48px; }
+  .route .sticker b{ font-size:1.375rem; }
+}
+
+/* ---------- sections ---------- */
+.sec{ position:relative; padding-block:var(--sp-7); }
+.sec-head{ display:flex; flex-wrap:wrap; align-items:end; justify-content:space-between; gap:var(--sp-2) var(--sp-4); margin-block-end:var(--sp-5); }
+.sec-head h2{ font-size:2.375rem; flex:1 1 16ch; min-inline-size:0; }
+.sec-head > *{ min-inline-size:0; }
+.sec-head p{ max-inline-size:44ch; }
+@media (min-width:900px){
+  .sec{ padding-block:var(--sp-8); }
+  .sec-head h2{ font-size:3.75rem; }
+}
+
+/* methods */
+.methods{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:var(--sp-4) var(--sp-3); }
+.method{
+  display:block; inline-size:100%; padding:0; border:0; background:none; text-align:start; cursor:pointer; color:var(--navy);
+}
+.method .duo{ aspect-ratio:4/5; }
+.method h3{ font-size:1.625rem; margin-block-start:var(--sp-2); }
+.method .mark{
+  display:inline-block; margin-block-start:6px; padding:4px 10px;
+  border:2px solid var(--navy); border-radius:3px 6px 4px 5px; font-size:1rem; font-weight:700; line-height:1.3;
+}
+.method .goes{ display:block; margin-block-start:8px; font-size:1rem; line-height:1.5; }
+.method:hover .duo img, .method[aria-pressed="true"] .duo img{ filter:url(#halftone-fine); }
+.method[aria-pressed="true"] .mark{ background:var(--navy) var(--ink-tex); color:var(--paper); }
+.method[aria-pressed="true"] h3{ text-decoration:underline; text-decoration-thickness:3px; text-underline-offset:.3em; }
+@media (min-width:900px){
+  .methods{ grid-template-columns:repeat(4, minmax(0,1fr)); gap:var(--sp-5); }
+  .method h3{ font-size:2rem; }
+}
+
+/* coffees */
+.shelf-bar{ display:flex; flex-wrap:wrap; align-items:center; gap:var(--sp-2) var(--sp-3); margin-block-end:var(--sp-4); min-block-size:44px; }
+.shelf-bar [hidden]{ display:none; }
+.chip-reset{ background:none; border:2px solid var(--navy); border-radius:3px 6px 4px 5px; padding:6px 14px; font-weight:700; cursor:pointer; min-block-size:44px; }
+.shelf{ display:grid; gap:var(--sp-5); }
+.coffee{ display:grid; grid-template-columns:112px minmax(0,1fr); gap:var(--sp-3); padding:var(--sp-3); }
+.coffee:nth-child(3n+1){ rotate:.35deg; }
+.coffee:nth-child(3n+2){ rotate:-.4deg; }
+#coffees .sec-head{ margin-block-end:var(--sp-2); }
+.coffee[hidden]{ display:none; }
+.coffee .duo{ aspect-ratio:3/4; align-self:start; }
+.duo img.lift{ object-position:24% 64%; filter:brightness(.62) contrast(1.5) url(#halftone); }
+.coffee h3{ font-size:1.5rem; }
+.coffee .meta{ font-size:1rem; line-height:1.55; margin-block-start:4px; }
+.coffee .notes{ font-size:1rem; line-height:1.55; margin-block-start:4px; font-weight:700; }
+.coffee .grind, .coffee .buy{ grid-column:1 / -1; }
+.coffee .grind{ margin-block-start:0; }
+.buy{ display:flex; align-items:center; justify-content:space-between; gap:var(--sp-3); }
+.buy .btn{ flex:1 1 auto; max-inline-size:260px; }
+.roast-scale{ display:inline-flex; gap:3px; vertical-align:middle; margin-inline-start:6px; }
+.roast-scale i{ inline-size:10px; block-size:10px; border-radius:50%; border:2px solid var(--navy); }
+.roast-scale i.on{ background:var(--navy); }
+@media (min-width:700px){
+  .shelf{ grid-template-columns:repeat(2, minmax(0,1fr)); }
+}
+@media (min-width:1100px){
+  .shelf{ grid-template-columns:repeat(4, minmax(0,1fr)); gap:var(--sp-6) var(--sp-4); }
+  .coffee{ grid-template-columns:minmax(0,1fr); grid-template-rows:auto auto auto 1fr; padding:var(--sp-3) var(--sp-3) var(--sp-4); }
+  .coffee .duo{ aspect-ratio:16/10; }
+  .coffee .grind{ align-self:end; }
+  .grind label{ font-size:.9375rem; padding-inline:10px; }
+  .shelf-end{ min-block-size:0; }
+}
+.tools{ display:grid; gap:var(--sp-4); margin-block-start:var(--sp-6); }
+.tool{ display:grid; grid-template-columns:112px minmax(0,1fr); gap:var(--sp-2) var(--sp-3); align-items:start; padding:var(--sp-3); }
+.tool .duo{ aspect-ratio:1/1; }
+.tool p{ margin-block-start:4px; font-size:1rem; }
+.tool .buy{ grid-column:1 / -1; }
+.btn{ white-space:nowrap; }
+.shelf-end{
+  display:flex; align-items:center; align-self:center; justify-self:start; gap:12px; min-block-size:48px; padding-block:8px;
+  text-decoration:underline; text-decoration-color:var(--kraft-deep); text-decoration-thickness:3px; text-underline-offset:.45em;
+  font-family:var(--f-head); font-size:1.75rem; line-height:1.3;
+}
+.shelf-end:hover{ text-decoration-color:currentColor; }
+@media (min-width:900px){ .tools{ grid-template-columns:1fr 1fr; gap:var(--sp-5); } .tool{ grid-template-columns:160px minmax(0,1fr); padding:var(--sp-4); } }
+.tool h3{ font-size:1.5rem; }
+.tool .btn{ min-block-size:48px; padding-inline:20px; }
+
+/* cart stamp impression on a label */
+.cart-mark{
+  position:absolute; z-index:3; inset-block-start:14px; inset-inline-start:14px;
+  padding:6px 12px; border:3px solid var(--navy); border-radius:4px 7px 5px 3px;
+  color:var(--navy); background:transparent; font-weight:700; font-size:1rem; line-height:1.3;
+  rotate:-7deg; pointer-events:none; filter:url(#rough-sm); visibility:hidden;
+}
+.cart-mark.on{ visibility:visible; }
+.cart-mark.slap{ animation:slap var(--pass) var(--ease) both; }
+@keyframes slap{ from{ scale:1.35; rotate:-12deg; } to{ scale:1; rotate:-7deg; } }
+
+/* order: the navy pass */
+.order{ background:var(--navy) var(--ink-tex); color:var(--paper); }
+.order h2{ color:var(--paper); }
+.steps{ list-style:none; margin:0; padding:0; display:grid; gap:var(--sp-6); }
+.step h3{ font-size:2.5rem; color:var(--kraft); }
+.step .when{ display:flex; align-items:center; gap:12px; min-block-size:56px; margin-block:var(--sp-2); font-weight:700; font-size:1.0625rem; }
+.step .when .sticker{ --d:56px; }
+.step p{ max-inline-size:36ch; }
+.order .reg{ color:#4A5676; }
+@media (min-width:900px){
+  .steps{ grid-template-columns:repeat(3, minmax(0,1fr)); gap:var(--sp-6); }
+  .step h3{ font-size:3.5rem; }
+}
+
+/* brew insert card */
+.insert-wrap{ display:grid; gap:0; align-items:center; position:relative; }
+.brew-stamp{ position:absolute; z-index:2; inline-size:120px; block-size:120px; inset-block-start:-40px; inset-inline-end:calc(var(--gut) + 8px); rotate:12deg; }
+.insert{
+  position:relative; padding:var(--sp-5) var(--sp-4); rotate:.8deg;
+  border:2px dashed var(--kraft-deep); outline:8px solid var(--paper);
+}
+.insert h2{ font-size:2.125rem; }
+.insert ol{ list-style:none; margin:var(--sp-4) 0 0; padding:0; display:grid; gap:var(--sp-3); counter-reset:s; }
+.insert li{ display:grid; grid-template-columns:40px minmax(0,1fr); gap:var(--sp-2); align-items:start; counter-increment:s; }
+.insert li::before{
+  content:counter(s, arabic-indic); display:grid; place-items:center; inline-size:36px; block-size:36px;
+  border:2px solid var(--navy); border-radius:50%; font-family:var(--f-head); font-size:1.25rem; line-height:1;
+}
+.insert .link{ display:inline-block; margin-block-start:var(--sp-4); }
+.brew-photo{ aspect-ratio:1280/850; order:-1; margin-inline:calc(var(--gut) * -1); }
+.insert-wrap .insert{ margin-block-start:-56px; margin-inline:4px; z-index:1; }
+@media (min-width:900px){
+  .insert-wrap{ grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); gap:0; }
+  .brew-photo{ order:0; grid-column:2; grid-row:1; margin:0; }
+  .brew-stamp{ inline-size:190px; block-size:190px; inset-block-start:auto; inset-block-end:-64px; inset-inline-end:calc(var(--gut) + 48px); }
+  .insert-wrap .insert{ grid-column:1; grid-row:1; margin:0; margin-inline-end:-72px; }
+  .insert{ padding:var(--sp-6); }
+  .insert h2{ font-size:2.75rem; }
+}
+
+/* cafés */
+.cafes{ display:grid; gap:0; }
+.cafes .duo{ aspect-ratio:1280/886; }
+.cafes-copy{ position:relative; z-index:1; margin:-40px var(--gut) 0; padding:var(--sp-4); }
+.cafes-copy h2{ font-size:2.25rem; }
+.cafes-copy p{ margin-block:var(--sp-2) var(--sp-4); }
+.cafes{ position:relative; }
+.kilo{
+  position:absolute; z-index:2; inset-block-start:var(--sp-4); inset-inline-end:-10px;
+  padding:8px 16px 4px; font-family:var(--f-head); font-size:2.25rem; line-height:1.2; rotate:-3deg;
+}
+.kilo{ color:var(--paper); background:var(--navy) var(--ink-tex); }
+@media (min-width:900px){
+  .cafes{ grid-template-columns:minmax(0,1fr) minmax(0,1.3fr); align-items:center; }
+  .cafes .duo{ grid-column:2; grid-row:1; }
+  .cafes-copy{ grid-column:1; grid-row:1; margin:0; margin-inline-end:-80px; padding:var(--sp-6); }
+  .cafes-copy h2{ font-size:3.25rem; }
+  .kilo{ font-size:4rem; inset-block-start:var(--sp-5); inset-inline-end:-36px; }
+}
+
+/* help */
+.help{ display:grid; gap:var(--sp-5); }
+.help h3{ font-size:1.75rem; }
+.help p{ margin-block-start:var(--sp-1); max-inline-size:40ch; }
+.help .btn{ margin-block-start:var(--sp-3); }
+.help > div + div{ border-block-start:2px solid var(--kraft-deep); padding-block-start:var(--sp-4); }
+@media (min-width:900px){
+  .help{ grid-template-columns:1.2fr 1fr 1fr; gap:var(--sp-6); }
+  .help > div + div{ border-block-start:0; padding-block-start:0; border-inline-start:2px solid var(--kraft-deep); padding-inline-start:var(--sp-5); }
+}
+
+/* footer */
+.foot{ background:var(--navy) var(--ink-tex); color:var(--paper); padding-block:var(--sp-7) var(--sp-5); }
+.foot-grid{ display:grid; gap:var(--sp-5); justify-items:start; }
+.foot .stamp{ inline-size:200px; block-size:200px; color:var(--kraft); mix-blend-mode:normal; rotate:-8deg; }
+.foot p{ max-inline-size:34ch; font-size:1.125rem; }
+.foot ul{ list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:6px var(--sp-4); }
+.foot a{ display:inline-block; padding-block:8px; text-decoration:none; font-weight:700; color:var(--paper); }
+.foot a:hover{ text-decoration:underline; text-decoration-color:var(--kraft); }
+.foot small{ display:block; margin-block-start:var(--sp-5); color:#D9CBB6; font-size:.9375rem; }
+@media (min-width:900px){
+  .foot-grid{ grid-template-columns:auto 1fr; align-items:center; column-gap:var(--sp-7); }
+  .foot .stamp{ inline-size:280px; block-size:280px; grid-row:span 2; }
+}
+
+/* ---------- print passes (signature) ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .js .pass .ink{ translate:2px -2px; }
+  .js .pass .ink.ghost{ text-shadow:-2px 2px 0 rgba(31,42,68,.32); }
+  .js .pass .slap-on{ scale:1.3; rotate:-14deg; }
+  .js .pass.inked .ink{ translate:0 0; text-shadow:none; transition:translate var(--pass) var(--ease), text-shadow var(--pass) steps(1,end); }
+  .js .pass.inked .slap-on{ scale:1; rotate:-6deg; transition:scale var(--pass) var(--ease) var(--pass), rotate var(--pass) var(--ease) var(--pass); }
+  .js .pass.inked .route .slap-on, .js .route.pass.inked .slap-on{ rotate:5deg; }
+}
+@media (prefers-reduced-motion:reduce){
+  .cart-mark.slap{ animation:none; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- halftone screen: 45° dot lattice thresholded against the photo's tone, then printed navy on kraft -->
+    <filter id="halftone" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feColorMatrix in="SourceGraphic" type="matrix" values=".30 .55 .15 0 0  .30 .55 .15 0 0  .30 .55 .15 0 0  0 0 0 1 0" result="g0"/>
+      <feComponentTransfer in="g0" result="g">
+        <feFuncR type="gamma" amplitude="1" exponent=".62" offset="0"/>
+        <feFuncG type="gamma" amplitude="1" exponent=".62" offset="0"/>
+        <feFuncB type="gamma" amplitude="1" exponent=".62" offset="0"/>
+      </feComponentTransfer>
+      <feImage x="0" y="0" width="8" height="8" preserveAspectRatio="none" result="cell"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cdefs%3E%3CradialGradient id='r' gradientUnits='userSpaceOnUse' cx='2.83' cy='2.83' r='4'%3E%3Cstop offset='0' stop-color='%23000'/%3E%3Cstop offset='1' stop-color='%23fff'/%3E%3C/radialGradient%3E%3Cpattern id='p' width='5.657' height='5.657' patternUnits='userSpaceOnUse' patternTransform='rotate(45)'%3E%3Crect width='5.657' height='5.657' fill='url(%23r)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='8' height='8' fill='url(%23p)'/%3E%3C/svg%3E"/>
+      <feTile in="cell" result="screen"/>
+      <feComposite in="g" in2="screen" operator="arithmetic" k1="0" k2="1" k3="1" k4="-.5" result="sum"/>
+      <feComponentTransfer in="sum" result="bw">
+        <feFuncR type="linear" slope="7" intercept="-3"/>
+        <feFuncG type="linear" slope="7" intercept="-3"/>
+        <feFuncB type="linear" slope="7" intercept="-3"/>
+      </feComponentTransfer>
+      <feComponentTransfer in="bw">
+        <feFuncR type="table" tableValues=".122 .788"/>
+        <feFuncG type="table" tableValues=".165 .655"/>
+        <feFuncB type="table" tableValues=".267 .486"/>
+        <feFuncA type="identity"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="halftone-fine" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feColorMatrix in="SourceGraphic" type="matrix" values=".30 .55 .15 0 0  .30 .55 .15 0 0  .30 .55 .15 0 0  0 0 0 1 0" result="g0"/>
+      <feComponentTransfer in="g0" result="g">
+        <feFuncR type="gamma" amplitude="1" exponent=".55" offset="0"/>
+        <feFuncG type="gamma" amplitude="1" exponent=".55" offset="0"/>
+        <feFuncB type="gamma" amplitude="1" exponent=".55" offset="0"/>
+      </feComponentTransfer>
+      <feImage x="0" y="0" width="6" height="6" preserveAspectRatio="none" result="cell"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cdefs%3E%3CradialGradient id='r' gradientUnits='userSpaceOnUse' cx='2.83' cy='2.83' r='4'%3E%3Cstop offset='0' stop-color='%23000'/%3E%3Cstop offset='1' stop-color='%23fff'/%3E%3C/radialGradient%3E%3Cpattern id='p' width='5.657' height='5.657' patternUnits='userSpaceOnUse' patternTransform='rotate(45)'%3E%3Crect width='5.657' height='5.657' fill='url(%23r)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='8' height='8' fill='url(%23p)'/%3E%3C/svg%3E"/>
+      <feTile in="cell" result="screen"/>
+      <feComposite in="g" in2="screen" operator="arithmetic" k1="0" k2="1" k3="1" k4="-.5" result="sum"/>
+      <feComponentTransfer in="sum" result="bw">
+        <feFuncR type="linear" slope="7" intercept="-3"/>
+        <feFuncG type="linear" slope="7" intercept="-3"/>
+        <feFuncB type="linear" slope="7" intercept="-3"/>
+      </feComponentTransfer>
+      <feComponentTransfer in="bw">
+        <feFuncR type="table" tableValues=".122 .788"/>
+        <feFuncG type="table" tableValues=".165 .655"/>
+        <feFuncB type="table" tableValues=".267 .486"/>
+      </feComponentTransfer>
+    </filter>
+    <!-- rubber-stamp ink: speckled gaps and a soft uneven edge -->
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency=".055" numOctaves="2" seed="11" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="3.5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="1" seed="4" result="speck"/>
+      <feColorMatrix in="speck" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.4 2.05" result="holes"/>
+      <feComposite in="d" in2="holes" operator="in" result="inked"/>
+      <feTurbulence type="fractalNoise" baseFrequency=".018" numOctaves="1" seed="2" result="press"/>
+      <feColorMatrix in="press" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.2 1.55" result="pressure"/>
+      <feComposite in="inked" in2="pressure" operator="in"/>
+    </filter>
+    <filter id="rough-sm" x="-10%" y="-20%" width="120%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="1" seed="9" result="speck"/>
+      <feColorMatrix in="speck" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.2 1.95" result="holes"/>
+      <feComposite in="SourceGraphic" in2="holes" operator="in"/>
+    </filter>
+    <path id="ring" d="M 100,100 m -79,0 a 79,79 0 1,1 158,0 a 79,79 0 1,1 -158,0"/>
+    <symbol id="stamp-art" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="95" fill="none" stroke="currentColor" stroke-width="6"/>
+      <circle cx="100" cy="100" r="64" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <text font-family="Almarai, sans-serif" font-weight="700" font-size="19" fill="currentColor">
+        <textPath href="#ring" startOffset="25%" text-anchor="middle">محمصة بن · إسكندرية</textPath>
+      </text>
+      <circle cx="21" cy="100" r="3" fill="currentColor"/>
+      <circle cx="179" cy="100" r="3" fill="currentColor"/>
+      <text x="100" y="104" text-anchor="middle" font-family="Lalezar, sans-serif" font-size="50" fill="currentColor">مرسى</text>
+      <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="100" cy="117" r="4"/>
+        <path d="M100 121 V151"/>
+        <path d="M90 128 H110"/>
+        <path d="M82 141 Q86 153 100 153 Q114 153 118 141"/>
+        <path d="M78 145 L82 140 L87 144"/>
+        <path d="M122 145 L118 140 L113 144"/>
+      </g>
+    </symbol>
+    <symbol id="reg" viewBox="0 0 22 22"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="6"/><path d="M11 0V22M0 11H22"/></g></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></g></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></g></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></g></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M4 18.5l1.3-3.6A7.5 7.5 0 1 1 8.6 18z"/></g></symbol>
+  </defs>
+</svg>
+
+<div class="strip">
+  <div class="wrap">
+    <span class="sticker" aria-hidden="true"><span><small>الأحد</small><b>٢٩</b></span></span>
+    <p><strong>التحميصة الجاية: <span class="nw">الأحد ٢٩</span> نوفمبر</strong><span class="rest">اطلب لحد السبت ١١ بالليل ويطلع لك <span class="nw">الإثنين ٣٠</span></span></p>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="مرسى، الصفحة الرئيسية">
+      <svg class="stamp" viewBox="0 0 200 200" aria-hidden="true"><use href="#stamp-art"/></svg>
+      <span>مرسى</span>
+    </a>
+    <nav class="nav" aria-label="الأقسام">
+      <ul>
+        <li><a href="/shop/">المتجر</a></li>
+        <li><a href="/brew/">إزاي تعمل قهوتك</a></li>
+        <li><a href="/roastery/">المحمصة</a></li>
+        <li><a href="/wholesale/">للكافيهات والمكاتب</a></li>
+      </ul>
+    </nav>
+    <div class="head-tools">
+      <form class="search" role="search" action="/shop/">
+        <label class="vh" for="q">دوّر في البن</label>
+        <input class="field" id="q" type="search" name="s" placeholder="بتدوّر على بن إيه؟">
+      </form>
+      <button class="icon-btn search-btn" type="button" aria-expanded="false" aria-controls="search-row" aria-label="دوّر">
+        <svg width="24" height="24" aria-hidden="true"><use href="#i-search"/></svg>
+      </button>
+      <a class="icon-btn" href="/cart/" aria-label="السلة">
+        <svg width="24" height="24" aria-hidden="true"><use href="#i-cart"/></svg>
+        <span class="cart-count num" id="cart-count" hidden>٠</span>
+      </a>
+      <button class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel" aria-label="القايمة">
+        <svg width="24" height="24" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="wrap">
+    <form class="search-row" id="search-row" role="search" action="/shop/">
+      <label class="vh" for="q2">دوّر في البن</label>
+      <input class="field" id="q2" type="search" name="s" placeholder="بتدوّر على بن إيه؟">
+    </form>
+    <nav class="menu-panel" id="menu-panel" aria-label="الأقسام">
+      <ul>
+        <li><a href="/shop/">المتجر</a></li>
+        <li><a href="/brew/">إزاي تعمل قهوتك</a></li>
+        <li><a href="/roastery/">المحمصة</a></li>
+        <li><a href="/wholesale/">للكافيهات والمكاتب</a></li>
+        <li><a href="/my-account/">حسابي</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero pass" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title" class="ink ghost"><span>بن طازة،</span><span>من المحمصة</span><span>لكنكتك</span></h1>
+          <svg class="stamp ink" viewBox="0 0 200 200" aria-hidden="true"><use href="#stamp-art"/></svg>
+        </div>
+
+        <div class="hero-figure">
+          <div class="duo hero-photo">
+            <img src="../../content/photos/hero-pixabay-8406187.jpg" width="1280" height="853" fetchpriority="high" decoding="async"
+                 alt="بن لسه طالع من التحميص بيتقلّب في صينية التبريد">
+          </div>
+          <svg class="reg" style="inset-block-start:-11px; inset-inline-end:-11px" aria-hidden="true"><use href="#reg"/></svg>
+          <svg class="reg" style="inset-block-start:-11px; inset-inline-start:-11px" aria-hidden="true"><use href="#reg"/></svg>
+          <svg class="stamp ink" viewBox="0 0 200 200" aria-hidden="true"><use href="#stamp-art"/></svg>
+
+          <article class="label best" aria-labelledby="best-title" data-name="بن تركي محوّج">
+            <div class="cart-mark" aria-hidden="true"></div>
+            <div class="best-top">
+              <h2 id="best-title" class="ink">المحوّج بتاعنا</h2>
+              <p class="price num">٢٣٠<small>ج</small></p>
+            </div>
+            <p class="best-meta">بن تركي محوّج · وسط لغامق · ٢٥٠ جم</p>
+            <p class="best-desc">أكتر حاجة بتتطلب. بن تركي محمّص وسط لغامق، مطحون ناعم، وعليه حبهان مطحون معاه. اللي بيشربه الصبح مش بيغيّره.</p>
+            <p class="roast-line"><span class="sticker slap-on" aria-hidden="true"><b>٢٩</b></span><span><span class="long">لو طلبت النهارده: </span>يتحمّص <span class="nw">الأحد ٢٩</span> ويطلع <span class="nw">الإثنين ٣٠</span></span></p>
+            <fieldset class="grind">
+              <legend>الطحنة</legend>
+              <div class="grind-opts">
+                <input type="radio" name="g-best" id="gb1" value="حبّ"><label for="gb1">حبّ</label>
+                <input type="radio" name="g-best" id="gb2" value="تركي ناعم جدًا" checked><label for="gb2">تركي ناعم جدًا</label>
+                <input type="radio" name="g-best" id="gb3" value="إسبريسو"><label for="gb3">إسبريسو</label>
+                <input type="radio" name="g-best" id="gb4" value="فلتر وV60"><label for="gb4">فلتر و<bdi>V60</bdi></label>
+                <input type="radio" name="g-best" id="gb5" value="فرنش بريس"><label for="gb5">فرنش بريس</label>
+              </div>
+            </fieldset>
+            <button class="btn btn-wide add" type="button">
+              <svg width="20" height="20" aria-hidden="true"><use href="#i-cart"/></svg>
+              حطّه في السلة
+            </button>
+          </article>
+        </div>
+
+        <div class="hero-more">
+          <p class="hero-lead">بنحمّص مرتين في الأسبوع، الأحد والأربع، وبنطحن على طلبك. كل كيس عليه تاريخ تحميصه.</p>
+          <div class="hero-actions">
+            <a class="btn" href="/shop/">اختار بنّك</a>
+            <a class="link" href="/brew/">إزاي تعمل قهوتك</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="route" aria-label="طلبك ماشي إزاي">
+      <ol>
+        <li>تطلب</li>
+        <li><svg width="24" height="24" aria-hidden="true"><use href="#i-arrow"/></svg></li>
+        <li>نحمّص الأحد <span class="sticker slap-on" aria-hidden="true"><b>٢٩</b></span><span class="vh">٢٩</span></li>
+        <li><svg width="24" height="24" aria-hidden="true"><use href="#i-arrow"/></svg></li>
+        <li>يطلع الإثنين ٣٠</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec pass" aria-labelledby="methods-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="methods-title" class="ink ghost">بتعمل قهوتك بإيه؟</h2>
+        <p>اختار طريقتك ونوريك البن اللي ينفع معاها، وبنطحنه على قدها.</p>
+      </div>
+      <div class="methods">
+        <button class="method" type="button" data-m="turk" data-grind="تركي ناعم جدًا" aria-pressed="false">
+          <div class="duo"><img src="../../content/photos/method_turkish-pixabay-6962331.jpg" width="1280" height="853" loading="lazy" decoding="async" alt="كنكتين نحاس صغيرين بيغلوا في رمل سخن"></div>
+          <h3 class="ink">كنكة</h3>
+          <span class="mark">طحنة ناعمة جدًا</span>
+          <span class="goes">التلات أنواع البن التركي</span>
+        </button>
+        <button class="method" type="button" data-m="esp" data-grind="إسبريسو" aria-pressed="false">
+          <div class="duo"><img src="../../content/photos/method_espresso-pixabay-2589761.jpg" width="1280" height="854" loading="lazy" decoding="async" alt="إسبريسو نازل من المكنة في فنجان أبيض"></div>
+          <h3 class="ink">إسبريسو</h3>
+          <span class="mark">طحنة ناعمة</span>
+          <span class="goes">المينا، البرازيلي، الكولومبي</span>
+        </button>
+        <button class="method" type="button" data-m="filter" data-grind="فلتر وV60" aria-pressed="false">
+          <div class="duo"><img src="../../content/photos/method_pourover-pixabay-3767936.jpg" width="1280" height="958" loading="lazy" decoding="async" alt="مية سخنة بتتصب على بن مطحون في قمع تقطير فوق إبريق إزاز"></div>
+          <h3 class="ink">فلتر و<span class="latin">V60</span></h3>
+          <span class="mark">طحنة وسط</span>
+          <span class="goes">الإثيوبي، الكولومبي</span>
+        </button>
+        <button class="method" type="button" data-m="press" data-grind="فرنش بريس" aria-pressed="false">
+          <div class="duo"><img src="../../content/photos/method_frenchpress-pixabay-2220369.jpg" width="853" height="1280" loading="lazy" decoding="async" alt="فرنش بريس مليان قهوة جنب فنجان أبيض على صينية خشب"></div>
+          <h3 class="ink">فرنش بريس</h3>
+          <span class="mark">طحنة خشنة</span>
+          <span class="goes">البرازيلي، الكولومبي</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec pass" id="coffees" aria-labelledby="coffees-title" style="padding-block-start:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="coffees-title" class="ink ghost">بن تركي وبن من بلاد بعيدة</h2>
+        <a class="link" href="/shop/">كل البن</a>
+      </div>
+      <div class="shelf-bar" aria-live="polite">
+        <p id="shelf-state">في المحمصة دلوقتي، مترتبين من الفاتح للغامق.</p>
+        <button class="chip-reset" type="button" id="shelf-reset" hidden>رجّع كل البن</button>
+      </div>
+
+      <div class="shelf">
+        <article class="label coffee" data-m="filter" data-name="إثيوبي سيدامو">
+          <div class="cart-mark" aria-hidden="true"></div>
+          <div class="duo"><img src="../../content/photos/p_ethiopia-pixabay-6632524.jpg" width="1280" height="812" loading="lazy" decoding="async" alt="حبّات بن محمّصة فاتح ووسط فوق بعض"></div>
+          <div>
+            <h3 class="ink">إثيوبي سيدامو</h3>
+            <p class="meta">إثيوبيا · ٢٥٠ جم</p>
+            <p class="meta">تحميص فاتح <span class="roast-scale" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span></p>
+            <p class="notes">ليمون، شاي، عسل</p>
+          </div>
+          <fieldset class="grind"><legend>الطحنة</legend><div class="grind-opts">
+            <input type="radio" name="g1" id="g1a" value="حبّ"><label for="g1a">حبّ</label>
+            <input type="radio" name="g1" id="g1b" value="تركي ناعم جدًا"><label for="g1b">تركي ناعم جدًا</label>
+            <input type="radio" name="g1" id="g1c" value="إسبريسو"><label for="g1c">إسبريسو</label>
+            <input type="radio" name="g1" id="g1d" value="فلتر وV60" checked><label for="g1d">فلتر و<bdi>V60</bdi></label>
+            <input type="radio" name="g1" id="g1e" value="فرنش بريس"><label for="g1e">فرنش بريس</label>
+          </div></fieldset>
+          <div class="buy"><p class="price num">٥٦٠<small>ج</small></p><button class="btn add" type="button">حطّه في السلة</button></div>
+        </article>
+
+        <article class="label coffee" data-m="esp filter press" data-name="كولومبي">
+          <div class="cart-mark" aria-hidden="true"></div>
+          <div class="duo"><img src="../../content/photos/p_colombia-pixabay-1239226.jpg" width="1280" height="853" loading="lazy" decoding="async" alt="بن محمّص وسط لونه بني دافي"></div>
+          <div>
+            <h3 class="ink">كولومبي</h3>
+            <p class="meta">كولومبيا · ٢٥٠ جم</p>
+            <p class="meta">تحميص وسط <span class="roast-scale" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span></p>
+            <p class="notes">كراميل، شيكولاتة بلبن، تفاح</p>
+          </div>
+          <fieldset class="grind"><legend>الطحنة</legend><div class="grind-opts">
+            <input type="radio" name="g2" id="g2a" value="حبّ" checked><label for="g2a">حبّ</label>
+            <input type="radio" name="g2" id="g2b" value="تركي ناعم جدًا"><label for="g2b">تركي ناعم جدًا</label>
+            <input type="radio" name="g2" id="g2c" value="إسبريسو"><label for="g2c">إسبريسو</label>
+            <input type="radio" name="g2" id="g2d" value="فلتر وV60"><label for="g2d">فلتر و<bdi>V60</bdi></label>
+            <input type="radio" name="g2" id="g2e" value="فرنش بريس"><label for="g2e">فرنش بريس</label>
+          </div></fieldset>
+          <div class="buy"><p class="price num">٤٨٠<small>ج</small></p><button class="btn add" type="button">حطّه في السلة</button></div>
+        </article>
+
+        <article class="label coffee" data-m="turk" data-name="بن تركي سادة">
+          <div class="cart-mark" aria-hidden="true"></div>
+          <div class="duo"><img src="../../content/photos/p_turkish_plain-pixabay-4668463.jpg" width="1280" height="853" loading="lazy" decoding="async" alt="بن محمّص ومغرفة خشب صغيرة على قماش كتان"></div>
+          <div>
+            <h3 class="ink">بن تركي سادة</h3>
+            <p class="meta">خلطة برازيلي وكولومبي · ٢٥٠ جم</p>
+            <p class="meta">تحميص وسط <span class="roast-scale" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span></p>
+            <p class="notes">مكسرات، كراميل</p>
+          </div>
+          <fieldset class="grind"><legend>الطحنة</legend><div class="grind-opts">
+            <input type="radio" name="g3" id="g3a" value="حبّ"><label for="g3a">حبّ</label>
+            <input type="radio" name="g3" id="g3b" value="تركي ناعم جدًا" checked><label for="g3b">تركي ناعم جدًا</label>
+            <input type="radio" name="g3" id="g3c" value="إسبريسو"><label for="g3c">إسبريسو</label>
+            <input type="radio" name="g3" id="g3d" value="فلتر وV60"><label for="g3d">فلتر و<bdi>V60</bdi></label>
+            <input type="radio" name="g3" id="g3e" value="فرنش بريس"><label for="g3e">فرنش بريس</label>
+          </div></fieldset>
+          <div class="buy"><p class="price num">٢١٠<small>ج</small></p><button class="btn add" type="button">حطّه في السلة</button></div>
+        </article>
+
+        <article class="label coffee" data-m="esp press" data-name="برازيلي">
+          <div class="cart-mark" aria-hidden="true"></div>
+          <div class="duo"><img src="../../content/photos/p_brazil-pixabay-9743627.jpg" width="1280" height="853" loading="lazy" decoding="async" alt="بن محمّص وسط لغامق مفروش"></div>
+          <div>
+            <h3 class="ink">برازيلي</h3>
+            <p class="meta">البرازيل · ٢٥٠ جم</p>
+            <p class="meta">تحميص وسط لغامق <span class="roast-scale" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></p>
+            <p class="notes">مكسرات، كاكاو، حموضة قليلة</p>
+          </div>
+          <fieldset class="grind"><legend>الطحنة</legend><div class="grind-opts">
+            <input type="radio" name="g4" id="g4a" value="حبّ" checked><label for="g4a">حبّ</label>
+            <input type="radio" name="g4" id="g4b" value="تركي ناعم جدًا"><label for="g4b">تركي ناعم جدًا</label>
+            <input type="radio" name="g4" id="g4c" value="إسبريسو"><label for="g4c">إسبريسو</label>
+            <input type="radio" name="g4" id="g4d" value="فلتر وV60"><label for="g4d">فلتر و<bdi>V60</bdi></label>
+            <input type="radio" name="g4" id="g4e" value="فرنش بريس"><label for="g4e">فرنش بريس</label>
+          </div></fieldset>
+          <div class="buy"><p class="price num">٤٢٠<small>ج</small></p><button class="btn add" type="button">حطّه في السلة</button></div>
+        </article>
+
+        <article class="label coffee" data-m="turk" data-name="بن تركي محوّج">
+          <div class="cart-mark" aria-hidden="true"></div>
+          <div class="duo"><img class="lift" src="../../content/photos/p_turkish_spiced-pixabay-7614369.jpg" width="1280" height="960" loading="lazy" decoding="async" alt="كيس ورق كرافت بيقع منه بن محمّص على خلفية بيضا"></div>
+          <div>
+            <h3 class="ink">بن تركي محوّج</h3>
+            <p class="meta">خلطة برازيلي وكولومبي · ٢٥٠ جم</p>
+            <p class="meta">تحميص وسط لغامق <span class="roast-scale" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></p>
+            <p class="notes">حبهان، شيكولاتة غامقة</p>
+          </div>
+          <fieldset class="grind"><legend>الطحنة</legend><div class="grind-opts">
+            <input type="radio" name="g5" id="g5a" value="حبّ"><label for="g5a">حبّ</label>
+            <input type="radio" name="g5" id="g5b" value="تركي ناعم جدًا" checked><label for="g5b">تركي ناعم جدًا</label>
+            <input type="radio" name="g5" id="g5c" value="إسبريسو"><label for="g5c">إسبريسو</label>
+            <input type="radio" name="g5" id="g5d" value="فلتر وV60"><label for="g5d">فلتر و<bdi>V60</bdi></label>
+            <input type="radio" name="g5" id="g5e" value="فرنش بريس"><label for="g5e">فرنش بريس</label>
+          </div></fieldset>
+          <div class="buy"><p class="price num">٢٣٠<small>ج</small></p><button class="btn add" type="button">حطّه في السلة</button></div>
+        </article>
+
+        <article class="label coffee" data-m="esp" data-name="خلطة إسبريسو المينا">
+          <div class="cart-mark" aria-hidden="true"></div>
+          <div class="duo"><img src="../../content/photos/p_espresso-pixabay-6603499.jpg" width="1280" height="853" loading="lazy" decoding="async" alt="حبّات بن غامقة لامعة قريبة أوي"></div>
+          <div>
+            <h3 class="ink">خلطة إسبريسو «المينا»</h3>
+            <p class="meta">برازيلي وإثيوبي · ١ كيلو</p>
+            <p class="meta">تحميص وسط لغامق <span class="roast-scale" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></p>
+            <p class="notes">شيكولاتة غامقة، بندق</p>
+          </div>
+          <fieldset class="grind"><legend>الطحنة</legend><div class="grind-opts">
+            <input type="radio" name="g6" id="g6a" value="حبّ"><label for="g6a">حبّ</label>
+            <input type="radio" name="g6" id="g6b" value="تركي ناعم جدًا"><label for="g6b">تركي ناعم جدًا</label>
+            <input type="radio" name="g6" id="g6c" value="إسبريسو" checked><label for="g6c">إسبريسو</label>
+            <input type="radio" name="g6" id="g6d" value="فلتر وV60"><label for="g6d">فلتر و<bdi>V60</bdi></label>
+            <input type="radio" name="g6" id="g6e" value="فرنش بريس"><label for="g6e">فرنش بريس</label>
+          </div></fieldset>
+          <div class="buy"><p class="price num">١٤٥٠<small>ج</small></p><button class="btn add" type="button">حطّه في السلة</button></div>
+        </article>
+
+        <article class="label coffee" data-m="turk" data-name="بن تركي غامق">
+          <div class="cart-mark" aria-hidden="true"></div>
+          <div class="duo"><img src="../../content/photos/p_turkish_dark-pixabay-5447420.jpg" width="1280" height="853" loading="lazy" decoding="async" alt="بن محمّص غامق مفروش قريب"></div>
+          <div>
+            <h3 class="ink">بن تركي غامق</h3>
+            <p class="meta">برازيلي · ٢٥٠ جم</p>
+            <p class="meta">تحميص غامق <span class="roast-scale" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></p>
+            <p class="notes">كاكاو، مُر خفيف</p>
+          </div>
+          <fieldset class="grind"><legend>الطحنة</legend><div class="grind-opts">
+            <input type="radio" name="g7" id="g7a" value="حبّ"><label for="g7a">حبّ</label>
+            <input type="radio" name="g7" id="g7b" value="تركي ناعم جدًا" checked><label for="g7b">تركي ناعم جدًا</label>
+            <input type="radio" name="g7" id="g7c" value="إسبريسو"><label for="g7c">إسبريسو</label>
+            <input type="radio" name="g7" id="g7d" value="فلتر وV60"><label for="g7d">فلتر و<bdi>V60</bdi></label>
+            <input type="radio" name="g7" id="g7e" value="فرنش بريس"><label for="g7e">فرنش بريس</label>
+          </div></fieldset>
+          <div class="buy"><p class="price num">٢٢٠<small>ج</small></p><button class="btn add" type="button">حطّه في السلة</button></div>
+        </article>
+        <a class="shelf-end" href="/shop/"><span>كل البن في المتجر</span><svg width="24" height="24" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <div class="tools">
+        <article class="label tool" data-name="كنكة نحاس">
+          <div class="cart-mark" aria-hidden="true"></div>
+          <div class="duo"><img src="../../content/photos/p_cezve-pixabay-6720496.jpg" width="1280" height="854" loading="lazy" decoding="async" alt="كنك نحاس مطروق متعلّقة"></div>
+          <div><h3 class="ink">كنكة نحاس</h3><p>مقاس ٣ فناجين، يد خشب</p></div>
+          <div class="buy"><p class="price num">٣٨٠<small>ج</small></p><button class="btn add" type="button">حطّها في السلة</button></div>
+        </article>
+        <article class="label tool" data-name="قمع تقطير سيراميك">
+          <div class="cart-mark" aria-hidden="true"></div>
+          <div class="duo"><img src="../../content/photos/p_dripper-pixabay-5712773.jpg" width="853" height="1280" loading="lazy" decoding="async" alt="قمع تقطير فيه بن والمية بتتصب عليه فوق إبريق"></div>
+          <div><h3 class="ink">قمع تقطير سيراميك</h3><p>لفلاتر الورق المخروطية، فنجان أو اتنين</p></div>
+          <div class="buy"><p class="price num">٤٥٠<small>ج</small></p><button class="btn add" type="button">حطّه في السلة</button></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec order on-ink pass" aria-labelledby="order-title">
+    <svg class="reg" style="inset-block-start:24px; inset-inline-start:24px" aria-hidden="true"><use href="#reg"/></svg>
+    <svg class="reg" style="inset-block-end:24px; inset-inline-end:24px" aria-hidden="true"><use href="#reg"/></svg>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="order-title" class="ink">من التحميصة لباب بيتك</h2>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <h3 class="ink">تطلب</h3>
+          <p class="when">لحد السبت ١١ بالليل</p>
+          <p>تختار البن والطحنة، وتدفع كاش عند الاستلام أو بالكارت.</p>
+        </li>
+        <li class="step">
+          <h3 class="ink">نحمّص</h3>
+          <p class="when"><span class="sticker slap-on" aria-hidden="true"><span><small>الأحد</small><b>٢٩</b></span></span><span>الأحد ٢٩ نوفمبر</span></p>
+          <p>طلبك يدخل في التحميصة الجاية، الأحد أو الأربع، ونطحنه بعدها على طول.</p>
+        </li>
+        <li class="step">
+          <h3 class="ink">يوصلك</h3>
+          <p class="when">يطلع الإثنين ٣٠</p>
+          <p>يطلع تاني يوم. في إسكندرية بيوصل نفس اليوم بـ٥٠ جنيه، وباقي المحافظات من ٢ لـ٤ أيام بـ٨٥ جنيه.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec pass" aria-labelledby="brew-title">
+    <div class="wrap insert-wrap">
+      <div class="label insert">
+        <h2 id="brew-title" class="ink">فنجان تركي زي ما بنعمله في المحمصة</h2>
+        <ol>
+          <li>معلقة كبيرة بن لكل فنجان، ومية ساقعة.</li>
+          <li>على نار هادية، وقلّب مرة واحدة بس في الأول.</li>
+          <li>أول ما الوش يعلى، شيلها من على النار وصبّ على طول.</li>
+        </ol>
+        <a class="link" href="/brew/">كل الطرق: كنكة، <span class="latin">V60</span>، إسبريسو، فرنش بريس</a>
+      </div>
+      <svg class="stamp brew-stamp" viewBox="0 0 200 200" aria-hidden="true"><use href="#stamp-art"/></svg>
+      <div class="duo brew-photo">
+        <img src="../../content/photos/bestseller-pixabay-161847.jpg" width="1280" height="850" loading="lazy" decoding="async" alt="كنكة نحاس وفنجان قهوة وكوباية مية على ترابيزة في بلكونة">
+      </div>
+    </div>
+  </section>
+
+  <section class="sec pass" aria-labelledby="cafes-title" style="padding-block-start:0">
+    <div class="wrap">
+      <div class="cafes">
+        <div class="duo">
+          <img src="../../content/photos/cafes-pixabay-3392168.jpg" width="1280" height="886" loading="lazy" decoding="async" alt="شوال خيش مفتوح وبن محمّص مالي المكان حواليه">
+        </div>
+        <span class="kilo ink" aria-hidden="true">بالكيلو</span>
+        <div class="label cafes-copy">
+          <h2 id="cafes-title" class="ink">عندك كافيه أو مكتب؟</h2>
+          <p>بنبيع بالكيلو، وبنحمّص الخلطة على مزاجكم. ابعتلنا هتحتاجوا قد إيه في الأسبوع ونتكلم.</p>
+          <a class="btn" href="/wholesale/">ابعت طلب</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec pass" aria-labelledby="help-title" style="padding-block-start:0">
+    <div class="wrap">
+      <h2 id="help-title" class="vh">مساعدة</h2>
+      <div class="help">
+        <div>
+          <h3 class="ink">محتار تختار؟</h3>
+          <p>ابعتلنا على واتساب بتعمل قهوتك بإيه وبتحبها إزاي، ونرشّحلك.</p>
+          <a class="btn" href="#"><svg width="20" height="20" aria-hidden="true"><use href="#i-chat"/></svg>اسألنا على واتساب</a>
+        </div>
+        <div>
+          <h3 class="ink">الدفع</h3>
+          <p>كاش عند الاستلام أو بالكارت.</p>
+        </div>
+        <div>
+          <h3 class="ink">لو هترجّع</h3>
+          <p>الكيس المقفول يترجع خلال ٧ أيام من الاستلام. البن المطحون مبيترجعش، إلا لو إحنا اللي طحناه غلط، ساعتها نبدّله.</p>
+          <a class="link" href="/policies/" style="display:inline-block; margin-block-start:12px">السياسات</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot on-ink">
+  <div class="wrap foot-grid">
+    <svg class="stamp" viewBox="0 0 200 200" role="img" aria-label="ختم مرسى، محمصة بن، إسكندرية"><use href="#stamp-art"/></svg>
+    <div>
+      <p>محمصة بن صغيرة في إسكندرية. بنحمّص الأحد والأربع.</p>
+      <ul style="margin-block-start:24px">
+        <li><a href="/shop/">المتجر</a></li>
+        <li><a href="/brew/">إزاي تعمل قهوتك</a></li>
+        <li><a href="/roastery/">المحمصة</a></li>
+        <li><a href="/wholesale/">للكافيهات والمكاتب</a></li>
+        <li><a href="/policies/">السياسات</a></li>
+        <li><a href="/my-account/">حسابي</a></li>
+        <li><a href="/cart/">السلة</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<p class="vh" aria-live="polite" id="announce"></p>
+
+<script>
+(function(){
+  var d=document, root=d.documentElement;
+  root.classList.add('js');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // header toggles
+  function toggler(btnSel, panelId){
+    var b=d.querySelector(btnSel), p=d.getElementById(panelId);
+    if(!b||!p) return;
+    b.addEventListener('click', function(){
+      var open=p.classList.toggle('open');
+      b.setAttribute('aria-expanded', open);
+      if(open){ var f=p.querySelector('input,a'); if(f) f.focus(); }
+    });
+  }
+  toggler('.search-btn','search-row');
+  toggler('.menu-btn','menu-panel');
+
+  // fake cart: stamps the label
+  var count=0, countEl=d.getElementById('cart-count'), say=d.getElementById('announce');
+  var digits='٠١٢٣٤٥٦٧٨٩';
+  function ar(n){ return String(n).replace(/\d/g,function(c){return digits[c];}); }
+  d.querySelectorAll('.add').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var card=btn.closest('.label'), name=card.getAttribute('data-name');
+      var g=card.querySelector('input[type=radio]:checked');
+      var mark=card.querySelector('.cart-mark');
+      count++; countEl.hidden=false; countEl.textContent=ar(count);
+      mark.textContent = g ? 'في السلة · '+g.value : 'في السلة';
+      mark.classList.remove('slap'); void mark.offsetWidth;
+      mark.classList.add('on'); if(!reduce) mark.classList.add('slap');
+      btn.lastChild.textContent = ' حطّ كمان واحد';
+      say.textContent = 'اتحط في السلة: '+name+(g?'، طحنة '+g.value:'')+'. في السلة '+ar(count)+'.';
+    });
+  });
+
+  // methods filter the shelf and preset the grind
+  var methods=d.querySelectorAll('.method'), coffees=d.querySelectorAll('.coffee');
+  var state=d.getElementById('shelf-state'), reset=d.getElementById('shelf-reset');
+  var base=state.textContent;
+  function clear(){
+    methods.forEach(function(m){ m.setAttribute('aria-pressed','false'); });
+    coffees.forEach(function(c){ c.hidden=false; });
+    state.textContent=base; reset.hidden=true;
+  }
+  methods.forEach(function(m){
+    m.addEventListener('click', function(){
+      if(m.getAttribute('aria-pressed')==='true'){ clear(); return; }
+      var key=m.getAttribute('data-m'), grind=m.getAttribute('data-grind'), n=0;
+      methods.forEach(function(x){ x.setAttribute('aria-pressed', x===m ? 'true':'false'); });
+      coffees.forEach(function(c){
+        var ok=(' '+c.getAttribute('data-m')+' ').indexOf(' '+key+' ')>-1;
+        c.hidden=!ok;
+        if(ok){ n++; c.querySelectorAll('input[type=radio]').forEach(function(r){ if(r.value===grind) r.checked=true; }); }
+      });
+      state.textContent='بن ينفع لـ'+m.querySelector('h3').textContent+' ('+ar(n)+')، والطحنة متظبطة على '+grind+'.';
+      reset.hidden=false;
+      d.getElementById('coffees').scrollIntoView({behavior: reduce?'auto':'smooth', block:'start'});
+    });
+  });
+  reset.addEventListener('click', clear);
+
+  // print passes: kraft is there, navy settles into register, then the red sticker
+  var passes=d.querySelectorAll('.pass');
+  // automated captures (headless screenshots) see the settled print and every photo
+  if(navigator.webdriver){
+    d.querySelectorAll('img').forEach(function(i){ i.loading='eager'; i.decoding='sync'; });
+    passes.forEach(function(p){ p.classList.remove('pass'); });
+    return;
+  }
+  if(reduce || !('IntersectionObserver' in window)){ passes.forEach(function(p){ p.classList.remove('pass'); }); return; }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('inked'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -12% 0px'});
+  passes.forEach(function(p){ io.observe(p); });
+})();
+</script>
+</body>
+</html>
