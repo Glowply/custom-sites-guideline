@@ -9,7 +9,7 @@ set -e
 target=$1; ability=$2; params=$3; wp_path=${4:-public_html}
 [ -n "$target" ] && [ -n "$ability" ] || { echo "usage: $0 <user@host[:port]> <ability> [params.json] [wp-path]" >&2; exit 1; }
 host=${target%:*}; port=22; [ "$host" != "$target" ] && port=${target##*:}
-p=$( [ -n "$params" ] && base64 -w0 "$params" || printf 'e30=' )
+p=$( [ -n "$params" ] && base64 < "$params" | tr -d '\n' || printf 'e30=' )   # no -w0: macOS base64 lacks it
 ssh -o BatchMode=yes -p "$port" "$host" \
   "cd $wp_path && AB_NAME='$ability' AB_PARAMS='$p' wp eval-file - --user=\$(wp user list --role=administrator --field=ID --orderby=ID --number=1)" \
   < "$(dirname "$0")/ability.php"

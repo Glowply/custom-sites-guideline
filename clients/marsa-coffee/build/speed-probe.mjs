@@ -4,7 +4,8 @@
 //           | noplug (block non-essential plugin CSS/JS) | all
 import { spawn } from 'node:child_process';
 import fs from 'node:fs'; import os from 'node:os'; import path from 'node:path';
-const CHROME = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
+// Chrome: set CHROME to override.
+const CHROME = process.env.CHROME || { win32: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', darwin: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' }[process.platform] || 'google-chrome';
 const [url, variant = 'base', runs = '3'] = process.argv.slice(2);
 const V = new Set(variant === 'all' ? ['nofilter', 'notex', 'nofont', 'noplug'] : variant.split('+'));
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

@@ -7,11 +7,13 @@ are not agreed until the owner moves them up into the numbered list.
 2026-11-24
 ------------------------------------------------------------
 1. PUSH ONLY WHEN THE OWNER SAYS.
-   The remote is github.com/Glowply/custom-sites-guideline (private; connected
-   2026-11-24). Commits are fine any time; pushes happen when the owner says,
-   and only what's asked. Before every push, check that nothing from a
-   clients/*/private/ folder is in the commits (rule 3): once pushed, it's on
-   GitHub for everyone with access to the repo.
+   The remote is github.com/Glowply/custom-sites-guideline (connected
+   2026-11-24; public since 2026-11-26, so the team's AIs can read it).
+   Commits are fine any time; pushes happen when the owner says, and only
+   what's asked. Before every push, check that nothing from a
+   clients/*/private/ folder, and no contact detail or login, is in the
+   commits (rule 3): once pushed, anyone on the internet can read it, and
+   making the repo private again doesn't take back copies already made.
 
 2. A CUSTOM SITE RUNS ON THE CLIENT'S OWN GLOWPLY STORE.
    Breakdance + WooCommerce + Arabic RTL, the same stack and build flow as the

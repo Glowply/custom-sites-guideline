@@ -4,6 +4,7 @@ Websites made for one Glowply client, not templates. Each runs on the client's o
 
 | File | What it is |
 |---|---|
+| [START.md](START.md) | The prompt to paste into an AI to start or continue a client, and what each computer needs |
 | [OWNER-RULES.txt](OWNER-RULES.txt) | The standing rules. Read first. |
 | [PROCESS.md](PROCESS.md) | The stages from intake to handover, and what each leaves behind |
 | [SCORECARD.md](SCORECARD.md) | Required checks and weighted factors for judging a site |
@@ -11,7 +12,7 @@ Websites made for one Glowply client, not templates. Each runs on the client's o
 | [tools/](tools/) | Speed test and the Breakdance ability runner |
 | [clients/](clients/) | One folder per client. Copy `_example/` to start. |
 
-**Remote:** github.com/Glowply/custom-sites-guideline (private). Push only when the owner says (rule 1). Client contracts, logins and original photos go in `clients/<slug>/private/`, which is never committed (rule 3).
+**Remote:** github.com/Glowply/custom-sites-guideline (**public** since 2026-11-26). Push only when the owner says (rule 1). Client contracts, logins and original photos go in `clients/<slug>/private/`, which is never committed (rule 3).
 
 ## How this differs from a template
 
