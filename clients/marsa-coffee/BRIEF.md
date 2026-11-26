@@ -1,9 +1,9 @@
 # Brief: «مرسى» Marsa, a coffee roaster in Alexandria
 
-> **Virtual client.** Marsa is made up, to run the custom-site process end to end (2026-11-25). Every fact below is the "client's" answer for this trial; none is about a real business. The owner plays the client at the review stages. For now the site is built on a glowplylibrary.com subsite instead of a client store.
+> **Virtual client.** Marsa is made up, to run the custom-site process end to end (2026-11-25). Every fact below is the "client's" answer for this trial; none is about a real business. The owner plays the client at the review stages. The site is built on a test store, sadasdtest.myglowply.com (2026-11-26).
 
-**Status:** direction (three mockups shown 2026-11-25; waiting for the client's pick)
-**Store:** for the trial, a glowplylibrary.com subsite (no feed entry: this is not a template)
+**Status:** build (direction 3 picked and built 2026-11-26; see build/README.md for what's open before review round 1)
+**Store:** for the trial, the test store sadasdtest.myglowply.com (SSH; the login is not kept in this repo)
 **Deadline:** none (trial)
 
 ## Must know

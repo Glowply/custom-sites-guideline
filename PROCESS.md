@@ -39,7 +39,7 @@ Give each build the brief, BRAND.md, the content and SCORECARD.md up front. Scre
 
 ## 5. Build
 
-On the client's Glowply store, with Breakdance (the MCP tools, or `tools/run-ability.js`). Build the home, shop, product, cart, checkout and the content pages from `content/`. Check logged out at 1440, 390 and 320, and run `tools/speed.mjs` on the home and a product page (median of 5 runs).
+On the client's Glowply store, with Breakdance (the MCP tools, `tools/run-ability.js`, or over SSH with `tools/ssh-ability.sh`). Read [BUILD-NOTES.md](BUILD-NOTES.md) first: the setup steps and the gotchas earlier builds hit. Build the home, shop, product, cart, checkout and the content pages from `content/`. Check logged out at 1440, 390 and 320, and run `tools/speed.mjs` on the home and a product page (median of 5 runs).
 
 ## 6. Review rounds
 

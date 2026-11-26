@@ -7,6 +7,7 @@ Websites made for one Glowply client, not templates. Each runs on the client's o
 | [OWNER-RULES.txt](OWNER-RULES.txt) | The standing rules. Read first. |
 | [PROCESS.md](PROCESS.md) | The stages from intake to handover, and what each leaves behind |
 | [SCORECARD.md](SCORECARD.md) | Required checks and weighted factors for judging a site |
+| [BUILD-NOTES.md](BUILD-NOTES.md) | Lessons from earlier builds: getting into a store, Breakdance and WooCommerce gotchas, speed |
 | [tools/](tools/) | Speed test and the Breakdance ability runner |
 | [clients/](clients/) | One folder per client. Copy `_example/` to start. |
 

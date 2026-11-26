@@ -34,8 +34,12 @@ What to know about each:
    - Too slow as built: the halftone filter is drawn in the browser. A real build would print the halftones into small image files.
    - It also has a test hook that loads every photo when an automated browser visits. That hook must go before a real build.
 
-- **Picked:** <the client's pick>
-- **Their comments:** <in their words>
+- **Picked:** direction 3, Overprint (2026-11-26, the owner playing the client).
+- **Their comments:** «build direction 3»
+- **What the build changes from the mockup:**
+  - The halftone duotones are rendered into image files ahead of time instead of being drawn by an SVG filter in the browser. That was the cause of the 10.1 s.
+  - The test hook that loaded every photo for automated browsers is dropped.
+- **Where:** sadasdtest.myglowply.com, a test store, instead of a library subsite.
 
 ## Round 1 — <date>
 

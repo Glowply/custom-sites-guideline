@@ -5,6 +5,7 @@ Adapted on 2026-11-24 from template-guideline's template scorecard (the weights 
 ## Required before each review round and before sign-off (pass/fail)
 
 1. **Fast on patchy mobile data.** Home and a product page, `tools/speed.mjs`, median of 5 runs. Budget (proposed, same as templates): main image ≤ 2.5 s on slow 4G, home ≤ 1.5 MB.
+   - *Measured 2026-11-26:* today's stores answer in 0.9–1.6 s with no page cache, and a plain product page already lands at 2.4–2.8 s. Until that's fixed for the platform, judge a site by how far it sits above the store's own product page, and record both numbers (BUILD-NOTES.md, "Speed").
 2. **Nothing breaks.** Logged out at 1440, 390 and 320: no sideways scroll, nothing cut off or overlapping, no broken images, no empty boxes, no English leaking into an Arabic page.
 3. **Readable Arabic, right to left.** Body text ≥ 16 px on a phone, enough line height, the client's fonts render (no fallback flash that changes the layout).
 4. **It's the client's brand.** Logo, colours, fonts and voice match BRAND.md, or the direction the client picked.
