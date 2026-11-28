@@ -4,6 +4,47 @@ client's store. Newest first. "Proposed" rules are drafts: follow them, but they
 are not agreed until the owner moves them up into the numbered list.
 
 ------------------------------------------------------------
+2026-11-28
+------------------------------------------------------------
+5. THE OWNER'S NOTES GO IN THE REPO, SO THE NEXT AI KNOWS THEM.
+   Every note, correction or preference the owner gives in a session (in
+   any language, about any client) is written to OWNER-NOTES.md in that
+   same session: the date, the client, the note in the owner's words, and
+   how to apply it next time. Commit it, and push that commit without
+   waiting to be asked (this is the owner's standing OK for OWNER-NOTES.md;
+   everything else still follows rule 1), after the rule-1 check that no
+   private/ file, contact detail or login is in it.
+   Every AI reads OWNER-NOTES.md at the start of a session (CLAUDE.md,
+   "Starting a session") and, if it has a memory of its own, saves the
+   notes there too. A newer note beats an older note or rule; say so when
+   it does.
+
+6. NEVER, EVER DELETE A MERCHANT'S PRODUCTS OR CATEGORIES.
+   Products and categories the merchant made on their own store are theirs:
+   never delete or trash them, not when empty, not when they look like
+   duplicates or tests, not to tidy up, and not because an import, a script
+   or a tool would. Don't rename them either unless the owner asks. If a
+   step would remove one, stop before it and tell the owner. Adding
+   categories, or putting products into categories, happens only when the
+   owner asks, and keeps a record that can undo it.
+
+7. MENUS ARE MENU ELEMENTS, NEVER GLOBAL BLOCKS.
+   A header or category menu is built with the builder's Menu element
+   (Breakdance: MenuBuilder with MenuLink and MenuDropdown items, a burger on
+   phones). Never build a menu from a loop that repeats a Global Block: it
+   broke on phones (Rona, 2026-11-28) and the merchant can't edit it as a
+   menu.
+
+8. A DESIGN'S CATEGORIES COME WITH IT.
+   When a library design is imported into a store and its menu or category
+   tiles use categories, create the ones the store doesn't have yet, named
+   exactly as in the design (category addresses come from the names, so the
+   menu links only work with the same names), in the design's order, each
+   with an image from the merchant's own photos. Do this as part of the
+   import when the design relies on them; never remove or rename the
+   merchant's own categories to make room (rule 6).
+
+------------------------------------------------------------
 2026-11-24
 ------------------------------------------------------------
 1. PUSH ONLY WHEN THE OWNER SAYS.

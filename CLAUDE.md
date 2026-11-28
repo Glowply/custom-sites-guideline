@@ -7,7 +7,7 @@ Custom websites for single Glowply clients. People start a session with the prom
 Do these in order before any client work, and say in one line what you found at each step:
 
 1. **Up to date:** `git pull`.
-2. **Read:** OWNER-RULES.txt, PROCESS.md, BUILD-NOTES.md, SCORECARD.md. For a store build, also `clients/marsa-coffee/build/README.md` (a worked example).
+2. **Read:** OWNER-NOTES.md first (the owner's notes from earlier sessions; save them to your own memory if you have one), then OWNER-RULES.txt, PROCESS.md, BUILD-NOTES.md, SCORECARD.md. For a store build, also `clients/marsa-coffee/build/README.md` (a worked example).
 3. **Client folder:**
    - A new client: copy `clients/_example/` to `clients/<slug>/` (lowercase letters, digits and dashes).
    - An existing client: open `clients/<slug>/` and work out its stage from the files present (the PROCESS.md table).
@@ -23,6 +23,8 @@ Do these in order before any client work, and say in one line what you found at 
 
 - **Stop at the gates that need a person:** the direction pick, each review round and sign-off. Show what's ready (screenshots, links), then wait.
 - **Commit at the end of each stage.** Push only when the person says (rule 1), after checking that no `private/` file and nothing from rule 3 is in the commits.
+- **Log the owner's notes as you go (rule 5).** Every note, correction or preference the owner gives goes into OWNER-NOTES.md in the same session (date, client, their words, how to apply it). Commit it and push that commit, after the private check; that push needs no extra OK. Save it to your own memory too, if you have one.
+- **Never delete or trash a merchant's products or categories (rule 6),** whatever an import or tool would do. Stop and tell the owner instead.
 - **Never commit or read out anything in `clients/*/private/`.** Never send client details to an outside service (rule 3). Phone numbers, emails, logins, contracts and agreed prices go in `private/`, never in BRIEF.md or REVIEWS.md.
 - **Judge with SCORECARD.md.** Its weights and the proposed rules (P1–P6) are drafts: follow them, but ask before treating them as agreed.
 - **Design:** combo B for a new look, combo C when the client's existing look must stay (PROCESS.md, "Direction").

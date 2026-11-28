@@ -5,7 +5,8 @@ Websites made for one Glowply client, not templates. Each runs on the client's o
 | File | What it is |
 |---|---|
 | [START.md](START.md) | The prompt to paste into an AI to start or continue a client, and what each computer needs |
-| [OWNER-RULES.txt](OWNER-RULES.txt) | The standing rules. Read first. |
+| [OWNER-NOTES.md](OWNER-NOTES.md) | The owner's notes from earlier sessions. Read first, add to it whenever the owner gives one (rule 5). |
+| [OWNER-RULES.txt](OWNER-RULES.txt) | The standing rules. |
 | [PROCESS.md](PROCESS.md) | The stages from intake to handover, and what each leaves behind |
 | [SCORECARD.md](SCORECARD.md) | Required checks and weighted factors for judging a site |
 | [BUILD-NOTES.md](BUILD-NOTES.md) | Lessons from earlier builds: getting into a store, Breakdance and WooCommerce gotchas, speed |
